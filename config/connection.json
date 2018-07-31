@@ -1,27 +1,22 @@
-{
-    "development": {
-      "username": "root",
-      "password": null,
-      "database": "blogger",
-      "host": "127.0.0.1",
-      "port": 3306,
-      "dialect": "mysql"
-    },
-    "test": {
-      "username": "root",
-      "password": null,
-      "database": "database_test",
-      "host": "127.0.0.1",
-      "port": 3306,
-      "dialect": "mysql"
-    },
-    "production": {
-      "username": "root",
-      "password": null,
-      "database": "database_production",
-      "host": "127.0.0.1",
-      "port": 3306,
-      "dialect": "mysql"
-    }
-  }
-  
+var mysql = require("mysql");
+
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+  } else {
+    connection = mysql.createConnection({
+      host: 'localhost',
+      user: 'root',
+      password: 'root',
+      database: 'karma_db'
+    });
+  };
+
+  connection.connect(function(err) {
+      if (err) {
+          console.error("error connecting: " + err.stack);
+          return;
+      }
+      console.log("connected as id " + connection.threadId);
+  })
+
+  module.exports = connection;

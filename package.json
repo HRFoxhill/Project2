@@ -1,0 +1,22 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "Project2 Repository",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HRFoxhill/Project2.git"
+  },
+  "author": "Jon Opacich, Heather Foxhill, Peg Mickelson, Brendon Barringer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HRFoxhill/Project2/issues"
+  },
+  "homepage": "https://github.com/HRFoxhill/Project2#readme",
+  "dependencies": {
+  }
+}

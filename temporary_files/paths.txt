@@ -1,0 +1,19 @@
+Route Type	Verb		PATH				Input							Output
+HTML		GET		/				
+HTML		GET		/login			
+HTML		GET		/signup
+API		POST		/api/user			username: skills: password: 				success || fail
+API		POST		/api/posts			skillneeded: description: 				success || fail
+API		GET		/api/user										all users
+API		GET		/api/posts										all job postings
+API		PUT		/api/posts/:id			id:	newdescription: newskillneeded: complete:	changes made
+API		PUT		/api/user/:id			id:	newskills:	newpassword: 			changes made
+API		GET		/api/posts/search		query params: skillNeeded 				all job postings with query
+API		GET		/api/posts/:id			id:							specific job posting
+
+
+
+//query like this:
+$.ajax('/api/posts/search',{
+data: {skillNeeded: 'JS'}
+})

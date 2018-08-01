@@ -13,14 +13,13 @@
 <body>
 
     <!-- hero -->
-    <section class="hero is-large">
+    <section class="hero is-medium">
         <div class="hero-body crossfade">
-                <figure></figure>
-                
-                <figure></figure>       
-                <figure></figure>
-                <figure></figure>
-                <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
             <div class="container karma-hero-title">
                 <img src="../app/public/images/karma-logo.svg" alt="Karma" id='header-logo' width=600>
                 <h1 class="" style="text-align:start;color:white;font-size: 2em">
@@ -34,9 +33,25 @@
     <div class="nav-wrapper" style="height:50px;">
         <nav class="navbar" role="navigation" aria-label="main navigation" id='navbar'>
             <div class="navbar-brand">
-                <a class="navbar-item" href="#">
-                    <img src="../app/public/images/karma-logo.svg" alt="Karma" id='nav-logo' width='150'>
-                </a>
+                <div class="tabs is-medium">
+                    <a class="navbar-item" href="#">
+                        <img src="../app/public/images/karma-logo.svg" alt="Karma" id='nav-logo' width='150'>
+                    </a>
+                    <ul id='tabs'>
+                        <li class="is-active">
+                            <a>Community</a>
+                        </li>
+                        <li>
+                            <a>Members</a>
+                        </li>
+                        <li>
+                            <a>Tab-3</a>
+                        </li>
+                        <li>
+                            <a>Tab-4</a>
+                        </li>
+                    </ul>
+                </div>
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -50,15 +65,17 @@
     <!-- fixed menu -->
     <aside class="menu box">
         <p class="menu-label">
-            General
+            Wallet
         </p>
         <ul class="menu-list">
             <li>
-                <a>Dashboard</a>
+                <a>Current Balance</a>
+                <p>50 Hours</p>
             </li>
             <li>
-                <a>Customers</a>
+                <a>Recent Transactions</a>
             </li>
+
         </ul>
         <p class="menu-label">
             Page layout
@@ -83,7 +100,7 @@
             </li>
             <li>
                 <a>Invitations</a>
-            </li>
+            </li>f
             <li>
                 <a>Cloud Storage Environment Settings</a>
             </li>
@@ -230,9 +247,10 @@
             </div>
     </section>
     </div>
+
     <!-- footer -->
     <footer class="footer">
-        <div class="content has-text-centered">
+        <div class="content has-text-centered footer-content">
             <p>
                 <strong>Karma</strong> by
                 <a target="_blank" href="https://Opacich.com">Jonathan Opacich</a>,

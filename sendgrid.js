@@ -3,25 +3,25 @@ var sgTransport = require('nodemailer-sendgrid-transport');
 
 var options = {
   auth: {
-    api_user: 'SENDGRID_USERNAME',
-    api_key: 'SENDGRID_PASSWORD'
+    api_user: 'SENDGRID_UN',
+    api_key: 'SENDGRID_PW'
   }
 }
 
 var client = nodemailer.createTransport({
     service: 'SendGrid',
     auth: {
-        user: 'pjmickelson',
-        pass: 'codingb00tcamp!'
+        user: 'email',
+        pass: 'xxxxx'
     }
 });
 
 var email = {
   from: 'pegmickelson@gmail.com',
-  to: 'pj_bliss@yahoo.com',
-  subject: 'Test for nodemailer',
-  text: 'Hello Person!',
-  html: '<b>Hello person</b>'
+  to: 'brendonbarringer@gmail.com',
+  subject: 'SWORDS for 2000',
+  text: 'Celebrity Jeopardy',
+  html: '<b>Hi from Peg!</b>'
 };
 
 console.log(email);

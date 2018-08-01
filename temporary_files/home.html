@@ -13,14 +13,13 @@
 <body>
 
     <!-- hero -->
-    <section class="hero is-large">
+    <section class="hero is-medium">
         <div class="hero-body crossfade">
-                <figure></figure>
-                
-                <figure></figure>       
-                <figure></figure>
-                <figure></figure>
-                <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
             <div class="container karma-hero-title">
                 <img src="../app/public/images/karma-logo.svg" alt="Karma" id='header-logo' width=600>
                 <h1 class="" style="text-align:start;color:white;font-size: 2em">
@@ -33,76 +32,95 @@
     <!-- navbar -->
     <div class="nav-wrapper" style="height:50px;">
         <nav class="navbar" role="navigation" aria-label="main navigation" id='navbar'>
+            <!-- left side of navbar -->
             <div class="navbar-brand">
-                <a class="navbar-item" href="#">
-                    <img src="../app/public/images/karma-logo.svg" alt="Karma" id='nav-logo' width='150'>
-                </a>
+                <!-- logo -->
+                <div class="navbar-item">
+                    <img src="../app/public/images/karma-leaf.svg" alt="Karma" id='header-logo' width=100>
+                </div>
+                <!-- hamburger -->
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
+            <!-- right side (not visible on mobile) -->
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <div class="navbar-item community-title">
+                        <h3 class="title is-4 ">My Community: &nbsp;</h3>
+                        <h4 class="subtitle is-4">St. Louis Park, MN</h4>
+                    </div>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item wallet">
+                        <p class="control">
+                            <a class="button is-static" target="_blank" href="#">
+                                <span class="icon">
+                                    <i class="far fa-credit-card"></i>
+                                </span>
+                                <span>
+                                    <strong>Current Balance: &nbsp;</strong>
+                                    <span id='balance'>10.5 </span>
+                                    <span>
+                                        <strong> hrs</strong>
+                                    </span>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="navbar-item">
+                        <p class="control">
+                            <a class=" button" target="_blank" href="#">
+                                <span class="icon">
+                                    <i class="far fa-credit-card"></i>
+                                </span>
+                                <span>
+                                    Transaction History
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </nav>
         </nav>
     </div>
 
 
-    <!-- fixed menu -->
+    <!-- left-side fixed menu -->
     <aside class="menu box">
-        <p class="menu-label">
-            General
+        <figure class="image is-64x64 avatar">
+            <img src="https://pbs.twimg.com/profile_images/693672457262071809/gcZ8gkZt_400x400.jpg" id='avatar-img'>
+        </figure>
+        <span class='welcome-text'>Jon Opacich</span>
+        <p class="menu-label section-nav">
+            Jump to Section
         </p>
         <ul class="menu-list">
             <li>
-                <a>Dashboard</a>
+                <a class="is-active">Community</a>
             </li>
             <li>
-                <a>Customers</a>
+                <a>Member</a>
+            </li>
+            <li>
+                <a>Rewards</a>
+            </li>
+            <li>
+                <a>Leaderboard</a>
             </li>
         </ul>
-        <p class="menu-label">
-            Page layout
+        <p class="menu-label settings">
+            Settings
         </p>
         <ul class="menu-list">
             <li>
-                <a>Community </a>
+                <a>Update Profile</a>
             </li>
             <li>
-                <a class="is-active">Manage Your Team</a>
-                <ul>
-                    <li>
-                        <a>Members</a>
-                    </li>
-                    <li>
-                        <a>Plugins</a>
-                    </li>
-                    <li>
-                        <a>Add a member</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a>Invitations</a>
-            </li>
-            <li>
-                <a>Cloud Storage Environment Settings</a>
-            </li>
-            <li>
-                <a>Authentication</a>
-            </li>
-        </ul>
-        <p class="menu-label">
-            Transactions
-        </p>
-        <ul class="menu-list">
-            <li>
-                <a>Payments</a>
-            </li>
-            <li>
-                <a>Transfers</a>
-            </li>
-            <li>
-                <a>Balance</a>
+                <a>Log Out</a>
             </li>
         </ul>
     </aside>
@@ -126,26 +144,15 @@
                             <p class="card-header-title">
                                 Component
                             </p>
-                            <a href="#" class="card-header-icon" aria-label="more options">
-                                <span class="icon">
-                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </a>
                         </header>
                         <div class="card-content">
                             <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                                <a href="#">@bulmaio</a>.
-                                <a href="#">#css</a>
-                                <a href="#">#responsive</a>
-                                <br>
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
+                                perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui sit quibusdam.
                             </div>
                         </div>
                         <footer class="card-footer">
-                            <a href="#" class="card-footer-item">Save</a>
-                            <a href="#" class="card-footer-item">Edit</a>
-                            <a href="#" class="card-footer-item">Delete</a>
+                            <a href="#" class="card-footer-item">Volunteer</a>
                         </footer>
                     </div>
                 </div>
@@ -230,9 +237,10 @@
             </div>
     </section>
     </div>
+
     <!-- footer -->
     <footer class="footer">
-        <div class="content has-text-centered">
+        <div class="content has-text-centered footer-content">
             <p>
                 <strong>Karma</strong> by
                 <a target="_blank" href="https://Opacich.com">Jonathan Opacich</a>,

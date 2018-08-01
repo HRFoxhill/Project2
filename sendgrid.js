@@ -1,18 +1,19 @@
+require("dotenv").config();
 var nodemailer = require('nodemailer');
 var sgTransport = require('nodemailer-sendgrid-transport');
 
 var options = {
   auth: {
-    api_user: 'SENDGRID_UN',
-    api_key: 'SENDGRID_PW'
+    api_user: process.env.SENDGRID_ID,
+    api_key: process.env.SENDGRID_SECRET
   }
 }
 
 var client = nodemailer.createTransport({
     service: 'SendGrid',
     auth: {
-        user: 'email',
-        pass: 'xxxxx'
+        user: process.env.SENDGRID_UN,
+        pass: process.env.SENDGRID_PW
     }
 });
 

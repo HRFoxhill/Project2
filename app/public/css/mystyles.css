@@ -6419,6 +6419,13 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+.card-title {
+  padding: 1vh 1vh -5vh 0;
+  margin: 0; }
+
+.card-content {
+  padding: 3vh 2vh; }
+
 .settings {
   padding-top: 20vh; }
 
@@ -6435,6 +6442,13 @@ label.panel-block {
 
 .avatar {
   padding-top: 0.5em; }
+
+.card-avatar {
+  display: inline-block; }
+
+#card-img {
+  padding: 0.5vw;
+  border-radius: 10px; }
 
 .community-title {
   padding-top: 2em; }

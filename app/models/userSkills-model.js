@@ -6,8 +6,8 @@
 
 module.exports = function(sequelize, DataTypes) {
     var UserSkills = sequelize.define("UserSkills", {
-        skill_id: {type: DataTypes.INTEGER, references: {model: skills, key: skill_id}},
-        user_id: {type: DataTypes.STRING, references: {model: users, key: user_id}}
+        skill_id: {type: DataTypes.INTEGER, references: {model: 'Skills', key: 'id'}},
+        user_id: {type: DataTypes.STRING, references: {model: 'Users', key: 'id'}}
     });
     return UserSkills
 }

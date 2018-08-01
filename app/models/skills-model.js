@@ -7,8 +7,7 @@
 
 module.exports = function(sequelize, DataTypes) {
     var Skills = sequelize.define("Skills", {
-        skill_id: {type: DataTypes.INTEGER, allowNull:false,autoIncrement:true, primarykey:true},
         skill_category: {type: DataTypes.STRING, allowNull: false}
-    })
+    });
     return Skills
 }

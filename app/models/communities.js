@@ -8,9 +8,8 @@
 
 module.exports = function(sequelize, DataTypes) {
     var Communities = sequelize.define("Communities", {
-        community_id: {type: DataTypes.INTEGER, allowNull:false,autoIncrement:true, primarykey: true},
         community_name: {type: DataTypes.STRING, allowNull: false},
-        project_id: {type: DataTypes.INTEGER, allowNull: false, references: {model: 'Projects', key: 'project_id'}}
+        project_id: {type: DataTypes.INTEGER, allowNull: false, references: {model: 'Projects', key: 'id'}}
     })
     return Communities
 }

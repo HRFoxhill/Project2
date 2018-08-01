@@ -1,11 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
     var Project = sequelize.define("Project", {
-      project_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        autoIncrement: true,
-        primarykey: true
-      },
       project_name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -13,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
       project_description: { type: DataTypes.TEXT, allowNull: false },
       project_hours: { type: DataTypes.INTEGER, allowNull: false },
       project_status: DataTypes.STRING,
-      askeduser_id: {type: DataTypes.INTEGER, allowNull: false, references: {model: 'Users', key: 'user_id'}  },
+      askeduser_id: {type: DataTypes.INTEGER, allowNull: false, references: {model: 'Users', key: 'user_id' } },
       taskeduser_id: {type: DataTypes.INTEGER, allowNull: false, references: {model: 'Users', key: 'user_id'} },
     });
   

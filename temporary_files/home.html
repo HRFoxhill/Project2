@@ -2,200 +2,249 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="../app/public/css/bulma.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../app/public/css/karma.css" />
+    <title>Karma</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="../app/public/css/mystyles.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
-    <script src="../app/public/js/login.js"></script>
+    <script src="../app/public/js/home.js"></script>
 </head>
 
 <body>
 
-    <!-- navbar -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="#">
-                <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
-            </a>
-
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-    </nav>
-
-
-    <div class="columns">
-
-        <!-- column-1 -->
-        <div class="column is-4 column-1">
-            <nav class="panel">
-                <p class="panel-heading">
-                    repositories
-                </p>
-                <div class="panel-block">
-                    <p class="control has-icons-left">
-                        <input class="input is-small" type="text" placeholder="search">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-search" aria-hidden="true"></i>
-                        </span>
-                    </p>
-                </div>
-                <p class="panel-tabs">
-                    <a class="is-active">all</a>
-                    <a>public</a>
-                    <a>private</a>
-                    <a>sources</a>
-                    <a>forks</a>
-                </p>
-                <a class="panel-block is-active">
-                    <span class="panel-icon">
-                        <i class="fas fa-book" aria-hidden="true"></i>
-                    </span>
-                    bulma
-                </a>
-                <a class="panel-block">
-                    <span class="panel-icon">
-                        <i class="fas fa-book" aria-hidden="true"></i>
-                    </span>
-                    marksheet
-                </a>
-                <a class="panel-block">
-                    <span class="panel-icon">
-                        <i class="fas fa-book" aria-hidden="true"></i>
-                    </span>
-                    minireset.css
-                </a>
-                <a class="panel-block">
-                    <span class="panel-icon">
-                        <i class="fas fa-book" aria-hidden="true"></i>
-                    </span>
-                    jgthms.github.io
-                </a>
-                <a class="panel-block">
-                    <span class="panel-icon">
-                        <i class="fas fa-code-branch" aria-hidden="true"></i>
-                    </span>
-                    daniellowtw/infboard
-                </a>
-                <a class="panel-block">
-                    <span class="panel-icon">
-                        <i class="fas fa-code-branch" aria-hidden="true"></i>
-                    </span>
-                    mojs
-                </a>
-                <label class="panel-block">
-                    <input type="checkbox"> remember me
-                </label>
-                <div class="panel-block">
-                    <button class="button is-link is-outlined is-fullwidth">
-                        reset all filters
-                    </button>
-                </div>
-            </nav>
-        </div>
-
-
-        <!-- column-2 -->
-        <div class="column column-2">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        Component
-                    </p>
-                    <a href="#" class="card-header-icon" aria-label="more options">
-                        <span class="icon">
-                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                    </a>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                        <a href="#">@bulmaio</a>.
-                        <a href="#">#css</a>
-                        <a href="#">#responsive</a>
-                        <br>
-                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                    </div>
-                </div>
-                <footer class="card-footer">
-                    <a href="#" class="card-footer-item">Save</a>
-                    <a href="#" class="card-footer-item">Edit</a>
-                    <a href="#" class="card-footer-item">Delete</a>
-                </footer>
+    <!-- hero -->
+    <section class="hero is-large">
+        <div class="hero-body crossfade">
+                <figure></figure>
+                
+                <figure></figure>       
+                <figure></figure>
+                <figure></figure>
+                <figure></figure>
+            <div class="container karma-hero-title">
+                <img src="../app/public/images/karma-logo.svg" alt="Karma" id='header-logo' width=600>
+                <h1 class="" style="text-align:start;color:white;font-size: 2em">
+                    Where communities come together.
+                </h1>
             </div>
         </div>
-
-
-        <!-- column-3 -->
-        <div class="column column-3">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        Component
-                    </p>
-                    <a href="#" class="card-header-icon" aria-label="more options">
-                        <span class="icon">
-                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                    </a>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                        <a href="#">@bulmaio</a>.
-                        <a href="#">#css</a>
-                        <a href="#">#responsive</a>
-                        <br>
-                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                    </div>
-                </div>
-                <footer class="card-footer">
-                    <a href="#" class="card-footer-item">Save</a>
-                    <a href="#" class="card-footer-item">Edit</a>
-                    <a href="#" class="card-footer-item">Delete</a>
-                </footer>
-            </div>
-        </div>
-
-
-        <!-- column-4 -->
-        <div class="column column-4">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        Component
-                    </p>
-                    <a href="#" class="card-header-icon" aria-label="more options">
-                        <span class="icon">
-                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                    </a>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                        <a href="#">@bulmaio</a>.
-                        <a href="#">#css</a>
-                        <a href="#">#responsive</a>
-                        <br>
-                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                    </div>
-                </div>
-                <footer class="card-footer">
-                    <a href="#" class="card-footer-item">Save</a>
-                    <a href="#" class="card-footer-item">Edit</a>
-                    <a href="#" class="card-footer-item">Delete</a>
-                </footer>
-            </div>
-        </div>
-    </div>
     </section>
+
+    <!-- navbar -->
+    <div class="nav-wrapper" style="height:50px;">
+        <nav class="navbar" role="navigation" aria-label="main navigation" id='navbar'>
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <img src="../app/public/images/karma-logo.svg" alt="Karma" id='nav-logo' width='150'>
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- fixed menu -->
+    <aside class="menu box">
+        <p class="menu-label">
+            General
+        </p>
+        <ul class="menu-list">
+            <li>
+                <a>Dashboard</a>
+            </li>
+            <li>
+                <a>Customers</a>
+            </li>
+        </ul>
+        <p class="menu-label">
+            Page layout
+        </p>
+        <ul class="menu-list">
+            <li>
+                <a>Community </a>
+            </li>
+            <li>
+                <a class="is-active">Manage Your Team</a>
+                <ul>
+                    <li>
+                        <a>Members</a>
+                    </li>
+                    <li>
+                        <a>Plugins</a>
+                    </li>
+                    <li>
+                        <a>Add a member</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a>Invitations</a>
+            </li>
+            <li>
+                <a>Cloud Storage Environment Settings</a>
+            </li>
+            <li>
+                <a>Authentication</a>
+            </li>
+        </ul>
+        <p class="menu-label">
+            Transactions
+        </p>
+        <ul class="menu-list">
+            <li>
+                <a>Payments</a>
+            </li>
+            <li>
+                <a>Transfers</a>
+            </li>
+            <li>
+                <a>Balance</a>
+            </li>
+        </ul>
+    </aside>
+
+
+
+
+    <section class='section' id='section-1'>
+        <p class="title">Community
+            <span class="subtitle is-6">Gain Karma while making your area a happier place to live.</span>
+        </p>
+
+        <div class="container">
+            <div class="columns">
+
+
+                <!-- column-2 -->
+                <div class="column column-2">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Component
+                            </p>
+                            <a href="#" class="card-header-icon" aria-label="more options">
+                                <span class="icon">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                                <a href="#">@bulmaio</a>.
+                                <a href="#">#css</a>
+                                <a href="#">#responsive</a>
+                                <br>
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item">Save</a>
+                            <a href="#" class="card-footer-item">Edit</a>
+                            <a href="#" class="card-footer-item">Delete</a>
+                        </footer>
+                    </div>
+                </div>
+
+
+                <!-- column-3 -->
+                <div class="column column-3">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Component
+                            </p>
+                            <a href="#" class="card-header-icon" aria-label="more options">
+                                <span class="icon">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim doloribus, odio voluptas architecto consequuntur quas dolores
+                                deserunt necessitatibus atque similique eaque pariatur fugit. Quas quasi consectetur, reiciendis
+                                sequi vero alias. Consequuntur quaerat dolorum asperiores voluptatem, debitis, nisi exercitationem
+                                animi laboriosam ullam in ratione ipsum neque. Nobis vel recusandae error assumenda esse
+                                odit velit cupiditate eos eum! Nemo quam cum eos. Repellendus magni in id veritatis libero
+                                dolorem? Eligendi ipsam debitis, necessitatibus earum nobis odio illo quasi! Aspernatur saepe
+                                magnam nisi delectus aliquam? Sit eveniet fuga quibusdam, officia pariatur consequatur incidunt?
+                                Perspiciatis et saepe, ipsum libero atque, illo eum, ad incidunt cum ea aliquid beatae officia
+                                placeat consequatur alias fuga exercitationem ratione! Molestiae consequuntur labore eius
+                                ducimus est sequi nisi ipsam? Dignissimos itaque omnis, consequuntur alias quis illo at cupiditate
+                                numquam ratione dolor totam laudantium, laborum blanditiis, maiores excepturi! Ipsam quaerat
+                                facilis unde sint rerum voluptas obcaecati vitae esse vero expedita. Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit. Qui corrupti necessitatibus impedit molestiae, soluta
+                                quasi? Saepe sapiente nihil quis officia rem minus voluptatem odio neque. Dolores perspiciatis
+                                deleniti soluta nostrum.
+                                <a href="#">@bulmaio</a>.
+                                <a href="#">#css</a>
+                                <a href="#">#responsive</a>
+                                <br>
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item">Save</a>
+                            <a href="#" class="card-footer-item">Edit</a>
+                            <a href="#" class="card-footer-item">Delete</a>
+                        </footer>
+                    </div>
+                </div>
+
+
+                <!-- column-4 -->
+                <div class="column column-4">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Component
+                            </p>
+                            <a href="#" class="card-header-icon" aria-label="more options">
+                                <span class="icon">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                                <a href="#">@bulmaio</a>.
+                                <a href="#">#css</a>
+                                <a href="#">#responsive</a>
+                                <br>
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item">Save</a>
+                            <a href="#" class="card-footer-item">Edit</a>
+                            <a href="#" class="card-footer-item">Delete</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+    </section>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Karma</strong> by
+                <a target="_blank" href="https://Opacich.com">Jonathan Opacich</a>,
+                <a href="https://jgthms.com">Brendan Berringer</a>,
+                <a href="https://jgthms.com">Peg Mickelson</a>,
+                <a href="https://jgthms.com">Heather Foxhill</a>. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed
+                <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
+        </div>
+    </footer>
+
 </body>
 
 </html>

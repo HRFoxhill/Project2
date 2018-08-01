@@ -1,0 +1,112 @@
+// 1. Import the initial variables
+
+@import "../../../node_modules/bulma/bulma.sass";
+$family-serif: "Merriweather", "Georgia", serif;
+
+.hero{
+    position:relative;
+}
+.karma-hero-title{
+    position:relative;
+    float:left;
+    top:13em;
+    right:15em;
+}
+#header-logo{
+    position:relative;
+    right:2em;
+}
+#navbar{
+    height:60px;
+    padding:0;
+    margin:0;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.37);
+}
+.column-1{
+    background-color: aqua;
+}
+.column-2{
+    background-color: rgb(0, 255, 64);
+}
+.column-3{
+    background-color: rgb(238, 255, 0);
+}
+.column-4{
+    background-color: rgb(255, 72, 0);
+}
+#logo{
+    margin:0;
+    padding:0;
+}
+.title{
+    text-align: center;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.menu{
+    position:absolute;
+    height:100%;
+    padding-left:20px;
+    padding-right:0;
+    width:17vw;
+}
+
+.sticky-menu{
+    position:fixed;
+    left:0;
+    bottom:0;
+    top:5.4%
+}
+.container{
+    width:70vw;
+    position:relative;
+    left:9vw;
+}
+.crossfade > figure {
+      animation: imageAnimation 30s linear infinite 0s;
+      backface-visibility: hidden;
+      background-size: cover;
+      background-position: center center;
+      color: transparent;
+      height: 100%;
+      left: 0px;
+      opacity: 0;
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      z-index: 0;
+    }
+
+@keyframes
+imageAnimation {  
+ 0% {animation-timing-function: ease-in; opacity: 0}
+ 8% {animation-timing-function: ease-out; opacity: 1}
+ 17% {opacity: 1}
+ 25% {opacity: 0}
+ 100% {opacity: 0}
+}
+.crossfade > figure:nth-child(1) { background-image: url('../images/smiling_child.jpg'); }
+
+.crossfade > figure:nth-child(2) {
+  animation-delay: 6s;
+  background-image: url("https://images.unsplash.com/photo-1525251007361-ea7caef5272e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=772c6740d9fa58b27915e09074885497&auto=format&fit=crop&w=2079&q=80");
+}
+
+.crossfade > figure:nth-child(3) {
+  animation-delay: 12s;
+  background-image: url("https://images.unsplash.com/photo-1504805572947-34fad45aed93?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=96e8c52b31b6e86b4abf5a20d9845793&auto=format&fit=crop&w=1350&q=80");
+}
+
+.crossfade > figure:nth-child(4) {
+  animation-delay: 18s;
+  background-image: url("https://images.unsplash.com/photo-1500837744038-ec60054ed01e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a6afec6e65db063cc6e263f5a955a54f&auto=format&fit=crop&w=1350&q=80");
+}
+
+.crossfade > figure:nth-child(5) {
+  animation-delay: 24s;
+  background-image: url("https://images.unsplash.com/photo-1526030071064-432feadf1c44?ixlib=rb-0.3.5&s=8caf9c2a4e796434593d96da45fd7f40&auto=format&fit=crop&w=1950&q=80");
+}

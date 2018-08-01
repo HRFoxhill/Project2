@@ -3743,7 +3743,7 @@ a.dropdown-item {
       background-color: whitesmoke;
       color: #363636; }
     .menu-list a.is-active {
-      background-color: #3273dc;
+      background-color: #117e11;
       color: #fff; }
   .menu-list li ul {
     border-left: 1px solid #dbdbdb;
@@ -6419,6 +6419,35 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+.settings {
+  padding-top: 20vh; }
+
+.section-nav {
+  padding-top: 5vh; }
+
+.avatar, .welcome-text {
+  display: inline-block;
+  padding: 0;
+  margin: 0; }
+
+#avatar-img {
+  border-radius: 100px; }
+
+.avatar {
+  padding-top: 0.5em; }
+
+.community-title {
+  padding-top: 2em; }
+
+#balance {
+  color: green;
+  font-weight: bolder; }
+
+.balance-div {
+  height: 70%;
+  width: auto;
+  padding: 5px; }
+
 .footer-content {
   padding-left: 25%;
   padding-right: 10%; }
@@ -6482,7 +6511,7 @@ label.panel-block {
   position: fixed;
   left: 0;
   bottom: 0;
-  top: 5.4%; }
+  top: 8.2%; }
 
 .container {
   width: 70vw;

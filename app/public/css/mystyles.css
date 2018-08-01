@@ -6419,13 +6419,22 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+.footer-content {
+  padding-left: 25%;
+  padding-right: 10%; }
+
+#tabs {
+  position: absolute;
+  bottom: 0;
+  right: 30%; }
+
 .hero {
   position: relative; }
 
 .karma-hero-title {
   position: relative;
   float: left;
-  top: 13em;
+  top: 5em;
   right: 15em; }
 
 #header-logo {

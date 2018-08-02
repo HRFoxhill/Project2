@@ -16,7 +16,7 @@ module.exports = function(app) {
 
   // signup page
   app.get("/", function(req, res) {    
-    res.sendFile(path.join(__dirname, "../views/signup.handlebars"));
+    res.render(path.join(__dirname, "../views/add.hbs"));
   });
 
   app.get("/home", function(req,res) {

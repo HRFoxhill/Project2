@@ -20,9 +20,9 @@ var client = nodemailer.createTransport({
 var email = {
   from: 'pegmickelson@gmail.com',
   to: 'brendonbarringer@gmail.com',
-  subject: 'SWORDS for 2000',
-  text: 'Celebrity Jeopardy',
-  html: '<b>Hi from Peg!</b>'
+  subject: 'Welcome to Karma!',
+  text: 'We are glad to have you here.',
+  html: '<b>Welcome to Karma!</b>'
 };
 
 console.log(email);

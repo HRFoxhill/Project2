@@ -5,8 +5,23 @@
 // );
 module.exports = function(sequelize, DataTypes) {
     var ProjectSkills = sequelize.define("ProjectSkills", {
-        skill_id: {type: DataTypes.INTEGER, references:{model:'Skills',key:'skill_id'}},
-        project_id: {type: DataTypes.INTEGER, references: {model: 'Projects', key:'project_id'}}
-    })
+        // skill_id: {type: DataTypes.INTEGER, references:{model:'Skills',key:'id'}},
+        // project_id: {type: DataTypes.INTEGER, references: {model: 'Projects', key:'id'}}
+    });
+    ProjectSkills.associate = function(models) {
+        ProjectSkills.belongsTo(models.Project, {
+        as: 'Project',
+        foreignKey: {
+          allowNull: false
+        }
+      });
+      ProjectSkills.belongsTo(models.Skills, {
+        as: 'RequiredSkills',
+        foreignKey: {
+          allowNull: false
+        }
+      });
+    }
+    
     return ProjectSkills
 };

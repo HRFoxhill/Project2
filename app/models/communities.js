@@ -9,7 +9,17 @@
 module.exports = function(sequelize, DataTypes) {
     var Communities = sequelize.define("Communities", {
         community_name: {type: DataTypes.STRING, allowNull: false},
-        project_id: {type: DataTypes.INTEGER, allowNull: false, references: {model: 'Projects', key: 'id'}}
+        // project_id: {type: DataTypes.INTEGER, allowNull: false, references: {model: 'Projects', key: 'id'}}
     })
+    Communities.associate = function(models) {
+
+    Communities.belongsTo(models.User, {
+        as: 'UserCommunity',
+        foreignKey: {
+          allowNull: false
+        }
+      });
+    }
+    
     return Communities
 }

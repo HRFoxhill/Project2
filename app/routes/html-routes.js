@@ -16,11 +16,11 @@ module.exports = function(app) {
 
   // signup page
   app.get("/", function(req, res) {    
-    res.sendFile(path.join(__dirname, "../views/signup.handlebars"));
+    res.sendFile(path.join(__dirname, "../../temporary_files/login.html"));
   });
 
   app.get("/home", function(req,res) {
-    res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+    res.render(path.join(__dirname, "../../temporary_files/signup.html"));
   })
   
 };

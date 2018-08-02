@@ -10,7 +10,7 @@ const session = require('express-session');
 const db = require("./app/models");
 
 app.use(express.static('app/public'));
-app.engine('hbs', hbs.express4({ defaultLayout: "./app/views/layouts/main",
+app.engine('hbs', hbs.express4({ defaultLayout: "./app/views/layouts/login",
   partialsDir: __dirname + '/app/views/partials'
 }));
 

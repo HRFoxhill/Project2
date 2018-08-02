@@ -9,40 +9,27 @@ $(document).ready(function () {
             $('#navbar').removeClass('sticky');
             $('.menu').removeClass('sticky-menu');
         }
-    }
+    })
 
-    var $tasks = $('#tasks');
-    var $name = $('#name');
+    var $projects = $('#projects');
+    // var $name = $('#name');
    
 
     $.ajax({
 
         type: 'GET',
-        url: '/api/tasks',
-        success: function (tasks) {
-            $.each(tasks, function (i, task) {
-                $tasks.append('<li>name: '+ task.name +', task:  '</li>');
+        url: '/api/projects',
+        success: function (projects) {
+            $.each(projects, function (i, project) {
+                $tasks.append('<li>project: '+ project_name +', descrption: '+project_description +'</li>');
             });
         },
         error: function () {
-            alert('error loading tasks');
+            alert('error loading projectss');
+            console.log(projects);
+            
         }
     });
-
-$('#add-task').on('click', function(){
-    var task = {
-        category: $category.val();
-    };
-
-    $.ajax({
-        type: "POST",
-        url: '/api/tasks',
-        data: task,
-        success: function() {
-
-        }
-    })
-    }
 
 })
 
@@ -75,4 +62,3 @@ $('#add-task').on('click', function(){
         // }
         let colorArray=["#8a128a", "#4e8a12","#128a4e","#128a8a","#12128a"];
 
-});

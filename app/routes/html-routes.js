@@ -16,15 +16,12 @@ module.exports = function(app) {
 
   // signup page
   app.get("/", function(req, res) {    
-<<<<<<< HEAD
     res.render(path.join(__dirname, "../views/add.hbs"));
-=======
-    res.sendFile(path.join(__dirname, "../../temporary_files/login.html"));
->>>>>>> models
   });
 
   app.get("/home", function(req,res) {
-    res.render(path.join(__dirname, "../../temporary_files/signup.html"));
+    console.log(req.session.user_id);
+
+    res.render("index");
   })
-  
 };

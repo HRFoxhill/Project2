@@ -37,9 +37,10 @@ router.post('/add', function(req, res) {
         }).then(function(dbResponse) {
             req.session.user_id = dbResponse.id;
             console.log("dbresponse" + dbResponse);
-       })
+       
        req.session.email=email;
-       res.redirect('/');
+       res.redirect('/home');
+       })
     }
     
  });

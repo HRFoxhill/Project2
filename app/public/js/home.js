@@ -31,7 +31,30 @@ $(document).ready(function () {
         }
     });
 
-})
+
+    var $tasks = $('#tasks');
+    var $name = $('#name');
+   
+
+    $.ajax({
+
+        type: 'GET',
+        url: '/api/tasks',
+        success: function (orders) {
+            console.log("orders from database", orders)
+            $.each(tasks, function (i, task) {
+                $tasks.append('<li>name: '+ task.name +', task:  '</li>');
+            });
+        },
+        error: function () {
+            alert('error loading tasks');
+        }
+    });
+
+$('#add-task').on('click', function(){
+
+
+
 
     var content = document.getElementById("card");
     var button = document.getElementById("show-more");
@@ -47,7 +70,7 @@ $(document).ready(function () {
         }
 
     };
-
+})
 // code for adding multi-color volunteer buttons
         // let colorCounter=0; 
     
@@ -62,3 +85,5 @@ $(document).ready(function () {
         // }
         let colorArray=["#8a128a", "#4e8a12","#128a4e","#128a8a","#12128a"];
 
+
+});

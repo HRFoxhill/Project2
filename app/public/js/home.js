@@ -8,7 +8,37 @@ $(document).ready(function () {
         else {
             $('#navbar').removeClass('sticky');
             $('.menu').removeClass('sticky-menu');
-
         }
     });
+
+
+    var content = document.getElementById("card");
+    var button = document.getElementById("show-more");
+
+    button.onclick = function () {
+
+        if (content.className == "open") {
+            //shrink the box
+            content.className = "";
+        } else {
+            //expand the box
+            content.className = "open";
+        }
+
+    };
+
+// code for adding multi-color volunteer buttons
+        // let colorCounter=0; 
+    
+        // //changes button color to rainbow spectrum
+        // let rainbowColors= ()=>{
+        //    let color = rainbowArray[colorCounter];
+        //     colorCounter++;
+        //     if (colorCounter===9){
+        //         colorCounter=0;
+        //     }
+        //     return color;
+        // }
+        let colorArray=["#8a128a", "#4e8a12","#128a4e","#128a8a","#12128a"];
+
 });

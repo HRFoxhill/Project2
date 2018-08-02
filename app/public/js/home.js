@@ -12,6 +12,24 @@ $(document).ready(function () {
     });
 
 
+    $.ajax({
+        type: 'GET',
+        url: '/api/posts',
+        success: function(data) {
+            $.each(data)
+        }
+      });
+
+      $.ajax({
+        type: 'GET',
+        url: '/api/posts/:',
+        success: function(data) {
+            $.each(data)
+        }
+      });  
+
+
+
     var content = document.getElementById("card");
     var button = document.getElementById("show-more");
 

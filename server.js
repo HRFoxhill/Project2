@@ -1,40 +1,48 @@
-// *****************************************************************************
-// Server.js - This file is the initial starting point for the Node/Express server.
-//
-// ******************************************************************************
-// *** Dependencies
-// =============================================================
-var express = require("express");
-var bodyParser = require("body-parser");
+const express = require('express');
+const app = express();
+const expressValidator = require('express-validator');
+const hbs = require('express-hbs');
+const path = require('path');
+const PORT = process.env.Port || 8080;
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const db = require("./app/models");
 
-// Sets up the Express App
-// =============================================================
-var app = express();
-var PORT = process.env.PORT || 8080;
+app.use(express.static('public'));
 
-// Requiring our models for syncing
-var db = require("./app/models");
+app.engine('hbs', hbs.express4({
+   partialsDir: __dirname + '/app/views/partials'
+ }));
+app.set('view engine', 'hbs');
+app.set('views', __dirname + '/app/views');
 
-// Sets up the Express app to handle data parsing
-
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
-// parse application/json
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(expressValidator());
+app.use(cookieParser());
+app.use(session({secret: 'HFoxhill', saveUninitialized: true, resave: false}));
 
-// Static directory
-app.use(express.static("public"));
-
-// Routes
-// =============================================================
+//Routes
+//=====================================================
 require("./app/routes/html-routes.js")(app);
 require("./app/routes/task-api-routes.js")(app);
 require("./app/routes/user-api-routes.js")(app);
 
-// Syncing our sequelize models and then starting our Express app
-// =============================================================
-db.sequelize.sync({ force: true }).then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+//routes for stretch verification.
+// const blockchain = require('./routes/blockchain.route');
+// app.use('/blockchain',blockchain);
+
+//user creation/verification and session Id route
+const user = require('./app/routes/userCreate.route');
+app.use('/user',user);
+
+app.get('/', function(req, res){
+    console.log("session email " + req.session.email)
+    res.send('hello');
+ });
+db.sequelize.sync().then(function() {
+app.listen(PORT, function(req, res){
+   console.log('Server is running on PORT: ',PORT);
+})
 });

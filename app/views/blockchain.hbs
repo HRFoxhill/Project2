@@ -1,0 +1,7 @@
+
+{{# if errors }}
+    {{# each errors }}
+    <form method="post" action="/blockchain/post"></form>
+          <p class="alert alert-danger">{{ this.msg }}</p>
+    {{/each}}
+{{/if}}

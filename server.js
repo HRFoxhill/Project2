@@ -9,11 +9,11 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const db = require("./app/models");
 
-app.use(express.static('public'));
+app.use(express.static('app/public'));
+app.engine('hbs', hbs.express4({ defaultLayout: "./app/views/layouts/main",
+  partialsDir: __dirname + '/app/views/partials'
+}));
 
-app.engine('hbs', hbs.express4({
-   partialsDir: __dirname + '/app/views/partials'
- }));
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/app/views');
 

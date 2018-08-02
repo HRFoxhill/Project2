@@ -10,8 +10,17 @@ $light:rgb(250, 250, 250);
 @import "../../../node_modules/bulma/bulma.sass";
 
 
+
+.user-table{
+    position:relative;
+    left:25%
+}
 #section-1{
     background-image:url('../images/funky-lines.png');
+
+}
+#section-2{
+    background-image:url('../images/what-the-hex.png');
 
 }
 .column-2{

@@ -6419,8 +6419,15 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+.user-table {
+  position: relative;
+  left: 25%; }
+
 #section-1 {
   background-image: url("../images/funky-lines.png"); }
+
+#section-2 {
+  background-image: url("../images/what-the-hex.png"); }
 
 .column-2 {
   padding-top: 160px; }

@@ -9,26 +9,42 @@ $(document).ready(function () {
             $('#navbar').removeClass('sticky');
             $('.menu').removeClass('sticky-menu');
         }
-    });
+    }
 
+    var $tasks = $('#tasks');
+    var $name = $('#name');
+   
 
     $.ajax({
+
         type: 'GET',
-        url: '/api/posts',
-        success: function(data) {
-            $.each(data)
+        url: '/api/tasks',
+        success: function (tasks) {
+            $.each(tasks, function (i, task) {
+                $tasks.append('<li>name: '+ task.name +', task:  '</li>');
+            });
+        },
+        error: function () {
+            alert('error loading tasks');
         }
-      });
+    });
 
-      $.ajax({
-        type: 'GET',
-        url: '/api/posts/:',
-        success: function(data) {
-            $.each(data)
+$('#add-task').on('click', function(){
+    var task = {
+        category: $category.val();
+    };
+
+    $.ajax({
+        type: "POST",
+        url: '/api/tasks',
+        data: task,
+        success: function() {
+
         }
-      });  
+    })
+    }
 
-
+})
 
     var content = document.getElementById("card");
     var button = document.getElementById("show-more");

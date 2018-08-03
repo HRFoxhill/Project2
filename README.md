@@ -30,19 +30,19 @@ Sass is a CSS extension that allows easability to editing your pages as well as 
 
 Attached are screenshots to walk you through our application.
 
-![Login screen](screenshot1.JPG) - Karma app login page
+![Login screen](https://github.com/HRFoxhill/Project2/blob/master/Screenshot1.JPG)
 
-[Commitments, Balance, Transactions](screenshot2.JPG) - Commitments, Balance, Transactions
+[Commitments, Balance, Transactions](https://github.com/HRFoxhill/Project2/blob/master/screenshot2.JPG) - Commitments, Balance, Transactions
 
-[Transactions and Balances - Detailed](screenshot3.JPG) - Transactions and Balances - Detailed
+[Transactions and Balances - Detailed](https://github.com/HRFoxhill/Project2/blob/master/screenshot3.JPG) - Transactions and Balances - Detailed
 
-[Community Projects - Detailed](screenshot4.JPG) - Community Projects - Detailed
+[Community Projects - Detailed](https://github.com/HRFoxhill/Project2/blob/master/screenshot4.JPG) - Community Projects - Detailed
 
-[Member Projects - Detailed](screenshot5.JPG) - Member Projects - Detailed
+[Member Projects - Detailed](https://github.com/HRFoxhill/Project2/blob/master/screenshot5.JPG) - Member Projects - Detailed
 
-[Nodemailer](screenshot6.JPG) - Nodemailer code
+[Nodemailer](https://github.com/HRFoxhill/Project2/blob/master/screenshot6.JPG) - Nodemailer code
 
-[Welcome Email](screenshot7.JPG) - Welcome Email Sample
+[Welcome Email](https://github.com/HRFoxhill/Project2/blob/master/screenshot7.JPG) - Welcome Email Sample
 
-[Sendgrid](screenshot8.JPG) - Sendgrid Activity Dashboard
+[Sendgrid](https://github.com/HRFoxhill/Project2/blob/master/screenshot8.JPG) - Sendgrid Activity Dashboard
 

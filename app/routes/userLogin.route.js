@@ -1,43 +1,20 @@
-const express = require('express');
-const router =  express.Router();
-const userCreateModel = require("../models")
+User.find({ 'passowrd': password,'email':email }, function(err, user) {
 
+    if (err) {
 
-
-router.get('/', function(req, res){
-   res.render('add', { errors: req.session.errors });
-   req.session.errors = null;
-});
-
-
-router.post('/add', function(req, res) {
-    let name = req.body.name;
-    let email = req.body.email;
-    let password = req.body.password;
-  
-    // console.log(req.body);
-
-    req.checkBody('email', 'Email is required').notEmpty();
-    req.checkBody('email', 'Please enter a valid email').isEmail();
-    req.checkBody('password', 'Please enter a password').notEmpty();
-  
-    const errors = req.validationErrors();
-    if(errors){
-       req.session.errors = errors;
-       res.redirect('/user');
+        console.log('Login error');
+        return done(err);
     }
-    else{
-       req.session.success = true;
-       console.log("hit the else route")
-      userCreateModel.User.create({
-          user_name: req.body.name, 
-          user_email: email, 
-          user_password: password 
-        }).then(function(dbResponse) {
-            req.session.user_id = dbResponse.id;
-            console.log("dbresponse" + dbResponse);
-       
-       req.session.email=email;
-       res.redirect('/home');
-       })
+
+    //if user found.
+    if (user.length!=0) {
+      if(user[0].email){
+        console.log('User  exists!');                         
+         }else{
+            console.log('User does not exist, try again or please sign up: ');      
+         }                                    
+         var err = new Error();
+        err.status = 310;
+        return done(err);
+
     }

@@ -6419,6 +6419,9 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+.column-5 {
+  padding-top: 100px; }
+
 .footer-1 {
   background-color: #842395; }
 

@@ -1,119 +1,122 @@
-
-    <!-- hero -->
-    <section class="hero is-medium">
-        <div class="hero-body crossfade">
-            <figure></figure>
-            <figure></figure>
-            <figure></figure>
-            <figure></figure>
-            <figure></figure>
-            <div class="container karma-hero-title">
-                <img src="/images/karma-logo.svg" alt="Karma" id='header-logo' width=600>
-                <h1 class="" style="text-align:start;color:white;font-size: 2em">
-                    Where communities come together.
-                </h1>
-            </div>
+<!-- hero -->
+<section class="hero is-medium">
+    <div class="hero-body crossfade">
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+        <div class="container karma-hero-title">
+            <img src="/images/karma-logo.svg" alt="Karma" id='header-logo' width=600>
+            <h1 class="" style="text-align:start;color:white;font-size: 2em">
+                Where communities come together.
+            </h1>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- navbar -->
-    <div class="nav-wrapper" style="height:50px;">
-        <nav class="navbar is-light" role="navigation" aria-label="main navigation" id='navbar'>
-            <!-- left side of navbar -->
-            <div class="navbar-brand">
-                <!-- logo -->
-                <div class="navbar-item">
-                    <img src="/images/karma-leaf.svg" alt="Karma" id='header-logo' width=100>
-                </div>
-                <!-- hamburger -->
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
+<!-- navbar -->
+<div class="nav-wrapper" style="height:50px;">
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation" id='navbar'>
+        <!-- left side of navbar -->
+        <div class="navbar-brand">
+            <!-- logo -->
+            <div class="navbar-item">
+                <img src="/images/karma-leaf.svg" alt="Karma" id='header-logo' width=100>
             </div>
-            <!-- right side (not visible on mobile) -->
-            <div class="navbar-menu">
-                <div class="navbar-start">
-                    <div class="navbar-item community-title level">
-                        <div class="level-left">
-                            <h3 class="title is-4 ">My Community: &nbsp;</h3>
-                        </div>
-                        <div class="level-right">
-                            <h4 class="subtitle is-4">St. Louis Park, MN</h4>
-                        </div>
-
+            <!-- hamburger -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- right side (not visible on mobile) -->
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item community-title level">
+                    <div class="level-left">
+                        <h3 class="title is-4 ">My Community: &nbsp;</h3>
+                    </div>
+                    <div class="level-right">
+                        <h4 class="subtitle is-4">St. Louis Park, MN</h4>
                     </div>
 
                 </div>
-                <div class="navbar-end">
-                    <div class="navbar-item has-addons">
-                        <p class="control">
-                            <a class=" button "  href="#table-container">
-                                <span class="icon">
-                                    <i class="fas fa-hands-helping"></i>
+
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item has-addons">
+                    <p class="control">
+                        <a class=" button " href="#table-container">
+                            <span class="icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </span>
+                            <strong>
+                                Commitments
+                            </strong>
+                        </a>
+                    </p>
+                    <form method="post" action="/project/add"></form>
+                    <div class="dropdown is-hoverable is-right">
+                        <div class="dropdown-trigger">
+                            <button class="button has-background-danger" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                <span class="icon is-small">
+                                    <i class="fas fa-plus " aria-hidden="true"></i>
                                 </span>
-                                <strong>
-                                    Commitments
-                                </strong>
-                            </a>
-                        </p>
-                        <div class="dropdown is-hoverable is-right">
-                            <div class="dropdown-trigger">
-                                <button class="button has-background-danger" aria-haspopup="true" aria-controls="dropdown-menu4">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-plus " aria-hidden="true"></i>
-                                    </span>
-                                </button>
-                            </div>
-                            <div class="dropdown-menu " id="dropdown-menu4" role="menu">
-                                <div class="dropdown-content ">
-                                    <h1 class='title'>Create a Project</h1>
-                                    <div class="dropdown-item">
-                                        <div class="field">
-                                            <label class="label">Title</label>
-                                            <div class="control">
-                                                <input class="input" type="text" placeholder="Text input">
-                                            </div>
-                                        </div>
-                                        <div class="field">
-                                            <label class="label">Skills Needed</label>
-                                            <div class="control">
-                                                <input class="input" type="text" placeholder="Text input">
-                                            </div>
-                                        </div>
-                                        <div class="field">
-                                                <label class="label">Duration</label>
-                                                <div class="control">
-                                                    <input class="input" type="text" placeholder="Text input">
-                                                </div>
-                                            </div>
-                                        <div class="field">
-                                                <label class="label">Description</label>
-                                                <div class="control">
-                                                  <textarea class="textarea" placeholder="Textarea"></textarea>
-                                                </div>
-                                              </div>
-                                        <div class="field">
-                                            <div class="control">
-                                                <label class="checkbox">
-                                                    <input type="checkbox"> I agree to the
-                                                    <a href="#">terms and conditions</a>
-                                                </label>
-                                            </div>
-                                        </div>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu " id="dropdown-menu4" role="menu">
+                            <div class="dropdown-content ">
+                                <h1 class='title'>Create a Project</h1>
+                                <div class="dropdown-item">
+                                    <div class="field">
+                                        <label class="label">Title</label>
                                         <div class="control">
-                                            <button class="button is-primary">Submit</button>
+                                            <input class="input" type="text" placeholder="Text input" name="name">
                                         </div>
                                     </div>
-
-
-
-
+                                    {{!--
+                                    <div class="field">
+                                        <label class="label">Skills Needed</label>
+                                        <div class="control">
+                                            <input class="input" type="text" placeholder="Text input" name="skills">
+                                        </div>
+                                    </div> --}}
+                                    <div class="field">
+                                        <label class="label">Hours</label>
+                                        <div class="control">
+                                            <input class="input" type="text" placeholder="Text input" name="hours">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">Description</label>
+                                        <div class="control">
+                                            <textarea class="textarea" placeholder="Textarea" name="description"></textarea>
+                                        </div>
+                                    </div>
+                                    {{!--
+                                    <div class="field">
+                                        <div class="control">
+                                            <label class="checkbox">
+                                                <input type="checkbox"> I agree to the
+                                                <a href="#">terms and conditions</a>
+                                            </label>
+                                        </div>
+                                    </div> --}}
+                                    <div class="control">
+                                        <button class="button is-primary">Submit</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    </form>
+                    {{# if errors }} {{# each errors }}
+                    <form method="post" action="/user/post"></form>
+                    <p class="alert alert-danger">{{ this.msg }}</p>
+                    {{/each}} {{/if}}
+
                     <div class="navbar-item is-grouped">
                         <p class="control wallet">
                             <a class="button is-static has-background-white has-text-black" target="_blank" href="#">
@@ -142,29 +145,33 @@
                     </div>
                 </div>
             </div>
-        </nav>
-        </nav>
+    </nav>
+    </nav>
     </div>
 
 
     <!-- left-side fixed menu -->
     <aside class="menu box has-background-light has-text-dark">
         <figure class="image is-96x96 avatar">
-            <img src="https://cdn.shopify.com/s/files/1/2393/5817/products/469ea6ac-8b8f-4a84-8d36-b1a4ff2aba99_1400x.jpg?v=1525277568" id='avatar-img'>
+            <img src="https://cdn.shopify.com/s/files/1/2393/5817/products/469ea6ac-8b8f-4a84-8d36-b1a4ff2aba99_1400x.jpg?v=1525277568"
+                id='avatar-img'>
         </figure>
         <span class='welcome-text'>Pickle Rick</span>
         <p class="menu-label section-nav">
             Jump to Section
         </p>
-        <ul class="menu-list"> 
+        <ul class="menu-list">
             <li>
-                <a class="is-active" href="#table-container"><i class="fas fa-flag"></i> Action Center</a>
+                <a class="is-active" href="#table-container">
+                    <i class="fas fa-flag"></i> Action Center</a>
             </li>
             <li>
-                <a href="#community-projects"><i class="fas fa-leaf" ></i> Community</a>
+                <a href="#community-projects">
+                    <i class="fas fa-leaf"></i> Community</a>
             </li>
             <li>
-                <a href="#member"><i class="fas fa-users" ></i> Member</a>
+                <a href="#member">
+                    <i class="fas fa-users"></i> Member</a>
             </li>
         </ul>
         <p class="menu-label settings">
@@ -172,10 +179,12 @@
         </p>
         <ul class="menu-list">
             <li>
-                <a><i class="fas fa-address-card"></i> Update Profile</a>
+                <a>
+                    <i class="fas fa-address-card"></i> Update Profile</a>
             </li>
             <li>
-                <a><i class="fas fa-power-off"></i> Log Out</a>
+                <a>
+                    <i class="fas fa-power-off"></i> Log Out</a>
             </li>
         </ul>
     </aside>
@@ -255,7 +264,7 @@
 
     <!-- community title container -->
     <div class="community-title-container" id='community-projects'>
-        <p class="title column-title has-text-white" >Community Projects.
+        <p class="title column-title has-text-white">Community Projects.
             <br>
             <span class="subtitle is-6 has-text-white">Gain Karma while making your area a happier place to live.</span>
         </p>
@@ -594,11 +603,106 @@
                 <!-- column-5 -->
                 <div class="column column-5" id='column-5'>
 
+
+                     <div class="card">
+                        <header class="card-header">
+                            <div class="card-header-icon">
+                                <figure class="image is-96x96 is-square card-avatar">
+                                    <img src="https://static.giantbomb.com/uploads/scale_small/0/9517/2816097-tumblr_n45cr8dmj61ty0km0o7_1280.png"
+                                        id='card-img'>
+                                </figure>
+                            </div>
+                            <h5 class="card-header-title is-centered title is-5">
+                                Help Morty with Math!
+                            </h5>
+
+                        </header>
+                        <div class="card-content" id='card'>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <strong>Skills Needed: </strong>
+                                        <span id="skills">Oh geez...idk</span>
+                                    </li>
+                                    <li>
+                                        <strong>Duration: </strong>
+                                        <span id="duration">5</span>
+                                        <strong>Hrs</strong>
+                                    </li>
+                                    <li id='content-area'>
+                                        <strong>Description:</strong>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
+                                        perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui
+                                        sit quibusdam.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer ">
+                            <span class="icon is-small" id='show-more'>
+                                <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
+                            </span>
+                            <a href="#" class="card-footer-item has-text-light footer-2" style='z-index:0;'>
+                                <strong>Volunteer</strong>
+                            </a>
+                        </footer>
+                    </div>
+
+
                 </div>
 
 
                 <!-- column-6 -->
                 <div class="column column-6" id='column-6'>
+
+
+                                        <div class="card">
+                        <header class="card-header">
+                            <div class="card-header-icon">
+                                <figure class="image is-96x96 is-square card-avatar">
+                                    <img src="https://vignette.wikia.nocookie.net/rickandmorty/images/4/46/Jerrypic.png/revision/latest?cb=20140129041526" id='card-img'>
+                                </figure>
+                            </div>
+                            <h5 class="card-header-title is-centered title is-5">
+                                Turn on my mower
+                            </h5>
+                        </header>
+                        <div class="card-content" id='card'>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <strong>Skills Needed:</strong>
+                                        <span id="skills">Good with sensitive people, Advanced Mowerology degree</span>
+                                    </li>
+                                    <li>
+                                        <strong>Duration: </strong>
+                                        <span id="duration">2</span>
+                                        <strong>Hrs</strong>
+                                    </li>
+                                    <li id='content-area'>
+                                        <strong>Description:</strong>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
+                                        perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui
+                                        sit quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod
+                                        iste placeat alias. Id quae corporis dolorum provident perferendis recusandae temporibus
+                                        possimus qui veritatis. Eligendi beatae quis qui sit quibusdam. Lorem ipsum dolor
+                                        sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis
+                                        dolorum provident perferendis recusandae temporibus possimus qui veritatis. Eligendi
+                                        beatae quis qui sit quibusdam.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer ">
+                            <span class="icon is-small" id='show-more'>
+                                <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
+                            </span>
+                            <a href="#" class="card-footer-item has-text-light footer-5" style='z-index:0;'>
+                                <strong>Volunteer</strong>
+                            </a>
+                        </footer>
+                    </div>
+
 
                 </div>
 

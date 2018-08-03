@@ -11,24 +11,24 @@ module.exports = function (sequelize, DataTypes) {
     // taskeduser_id: {type: DataTypes.INTEGER, allowNull: false, references: {model: 'Users', key: 'id'} },
   });
 
-  Project.associate = function (models) {
+  // Project.associate = function (models) {
 
-    Project.belongsTo(models.User, {
-      as: 'askedUser',
-      foreignKey: {
-        allowNull: false
-      }
-    });
+  //   Project.belongsTo(models.User, {
+  //     as: 'askedUser',
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
 
-    Project.belongsTo(models.User, {
-      as: 'taskedUser',
+  //   Project.belongsTo(models.User, {
+  //     as: 'taskedUser',
 
-      foreignKey: {
-        allowNull: true
-      }
+  //     foreignKey: {
+  //       allowNull: true
+  //     }
 
-    });
-  };
+  //   });
+  // };
 
   return Project;
 };

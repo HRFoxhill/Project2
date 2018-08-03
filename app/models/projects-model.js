@@ -23,7 +23,7 @@ module.exports = function (sequelize, DataTypes) {
     Project.belongsTo(models.User, {
       as: 'taskedUser',
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
   };

@@ -14,7 +14,7 @@ module.exports = function(app) {
 
 
 
-  // signup page
+  // signup/login page
   app.get("/", function(req, res) {    
     res.render(path.join(__dirname, "../views/add.hbs"));
   });

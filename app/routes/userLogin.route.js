@@ -1,10 +1,28 @@
-User.findOne({'email':email, 'password': password}, function(err, user) {
 
-    if (err) {
+const express = require('express');
+const app =  express.Router();
 
-        console.log('Login error');
-        return done(err);
-    }
+
+//LOGIN FORM
+app.get('/', function (req, res) {
+    res.render('add', {errors: req.session.errors});
+    req.session.errors = null;
+});
+
+//LOGIN POST
+app.post('/add', function (req, res) {
+    User.find(req.body.email, function (user) {
+        bcrypt.compare(req.body.password, user.password, function (err, result) {
+            if (result) {
+                req.session.currentUser = user.id;
+                res.redirect('/home');
+            } else {
+                res.redirect('/add');
+            }
+        });
+    });
+});
+
 
     //if user found.
     if (user.length!=0) {
@@ -18,5 +36,11 @@ User.findOne({'email':email, 'password': password}, function(err, user) {
         return done(err);
 
     }
+
+
+//LOGOUT
+app.delete('/logout', function (req, res) {
+    req.session.currentUser = null;
+    res.redirect('/');
 
 });

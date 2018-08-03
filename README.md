@@ -29,6 +29,12 @@ A combination of these 3 plugins allows for data validation, session tracking, p
 
 ***Sass*** is a CSS extension that allows easibility to editing your pages as well as a library of functionalities that make management of your front end simple and concise.
 
+Node and Express
+MySQL
+Sequelize ORM
+Handlebars
+
+
 **Engineers**
 
 - Brendon Barringer

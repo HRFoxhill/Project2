@@ -26,7 +26,7 @@ app.use(session({secret: 'HFoxhill', saveUninitialized: true, resave: false}));
 //Routes
 //=====================================================
 require("./app/routes/html-routes.js")(app);
-require("./app/routes/task-api-routes.js")(app);
+require("./app/routes/projects-api-routes.js")(app);
 require("./app/routes/user-api-routes.js")(app);
 
 //routes for stretch verification.

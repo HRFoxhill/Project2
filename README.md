@@ -30,7 +30,7 @@ Sass is a CSS extension that allows easability to editing your pages as well as 
 
 Attached are screenshots to walk you through our application.
 
-![Login screen](screenshot1.JPG) - Karma app login page
+![Login screen](https://github.com/HRFoxhill/Project2/Screenshot1.JPG) - Karma app login page
 
 [Commitments, Balance, Transactions](screenshot2.JPG) - Commitments, Balance, Transactions
 

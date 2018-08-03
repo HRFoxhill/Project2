@@ -39,28 +39,29 @@ A combination of these 3 plugins allows for data validation, session tracking, p
 **Acknowledgments**
 Thank you to Katie Campbell, Rory Hager and Joe Kanter  -- instructors, tech guides extraordinaire
 
-**Attached are screenshots to walk you through our application.**
+**Screenshots to walk you through our application.**
 
-=== Login page ![Login screen](https://github.com/HRFoxhill/Project2/blob/master/Screenshot1.JPG)
-
-
-===  Commitments, Balance, Transactions ![Commitments, Balance, Transactions](https://github.com/HRFoxhill/Project2/blob/master/Screenshot2.JPG)
+*=== Login page* 
+![Login screen](https://github.com/HRFoxhill/Project2/blob/master/Screenshot1.JPG)
 
 
-===  Transactions and Balances - Detailed ![Transactions and Balances - Detailed](https://github.com/HRFoxhill/Project2/blob/master/Screenshot3.JPG)
+*===  Commitments, Balance, Transactions* ![Commitments, Balance, Transactions](https://github.com/HRFoxhill/Project2/blob/master/Screenshot2.JPG)
 
 
-===  Community Projects - Detailed![Community Projects - Detailed](https://github.com/HRFoxhill/Project2/blob/master/Screenshot4.JPG)
+*===  Transactions and Balances - Detailed* ![Transactions and Balances - Detailed](https://github.com/HRFoxhill/Project2/blob/master/Screenshot3.JPG)
 
 
-===  Member Projects - Detailed![Member Projects - Detailed](https://github.com/HRFoxhill/Project2/blob/master/Screenshot5.JPG)
+*===  Community Projects - Detailed*![Community Projects - Detailed](https://github.com/HRFoxhill/Project2/blob/master/Screenshot4.JPG)
 
 
-===  Nodemailer code![Nodemailer](https://github.com/HRFoxhill/Project2/blob/master/Screenshot6.JPG)
+*===  Member Projects - Detailed*![Member Projects - Detailed](https://github.com/HRFoxhill/Project2/blob/master/Screenshot5.JPG)
 
 
-===  Welcome Email Example![Welcome Email](https://github.com/HRFoxhill/Project2/blob/master/Screenshot7.JPG)
+*===  Nodemailer code*![Nodemailer](https://github.com/HRFoxhill/Project2/blob/master/Screenshot6.JPG)
 
 
-===  Sendgrid Activity Dashboard![Sendgrid](https://github.com/HRFoxhill/Project2/blob/master/Screenshot8.JPG)
+*===  Welcome Email Example*![Welcome Email](https://github.com/HRFoxhill/Project2/blob/master/Screenshot7.JPG)
+
+
+*===  Sendgrid Activity Dashboard*![Sendgrid](https://github.com/HRFoxhill/Project2/blob/master/Screenshot8.JPG)
 

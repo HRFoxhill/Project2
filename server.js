@@ -26,7 +26,7 @@ app.use(session({secret: 'HFoxhill', saveUninitialized: true, resave: false}));
 //Routes
 //=====================================================
 require("./app/routes/html-routes.js")(app);
-require("./app/routes/task-api-routes.js")(app);
+require("./app/routes/projects-api-routes.js")(app);
 require("./app/routes/user-api-routes.js")(app);
 
 //routes for stretch verification.
@@ -46,3 +46,17 @@ app.listen(PORT, function(req, res){
    console.log('Server is running on PORT: ',PORT);
 })
 });
+
+// //user login/verification and session Id route
+// const login = require('./app/routes/userLogin.route');
+// app.use('/login',login);
+
+// app.get('/', function(req, res){
+//     console.log("session email " + req.session.email)
+//     res.send('hello');
+//  });
+// db.sequelize.sync().then(function() {
+// app.listen(PORT, function(req, res){
+//    console.log('Server is running on PORT: ',PORT);
+// })
+// });

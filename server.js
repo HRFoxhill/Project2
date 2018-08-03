@@ -10,7 +10,7 @@ const session = require('express-session');
 const db = require("./app/models");
 
 app.use(express.static('app/public'));
-app.engine('hbs', hbs.express4({ defaultLayout: "./app/views/layouts/main",
+app.engine('hbs', hbs.express4({ defaultLayout: "./app/views/layouts/login",
   partialsDir: __dirname + '/app/views/partials'
 }));
 
@@ -36,6 +36,20 @@ require("./app/routes/user-api-routes.js")(app);
 //user creation/verification and session Id route
 const user = require('./app/routes/userCreate.route');
 app.use('/user',user);
+
+app.get('/', function(req, res){
+    console.log("session email " + req.session.email)
+    res.send('hello');
+ });
+db.sequelize.sync().then(function() {
+app.listen(PORT, function(req, res){
+   console.log('Server is running on PORT: ',PORT);
+})
+});
+
+//user login/verification and session Id route
+const login = require('./app/routes/userLogin.route');
+app.use('/login',login);
 
 app.get('/', function(req, res){
     console.log("session email " + req.session.email)

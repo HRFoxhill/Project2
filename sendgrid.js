@@ -1,13 +1,14 @@
 require("dotenv").config();
 var nodemailer = require('nodemailer');
-var sgTransport = require('nodemailer-sendgrid-transport');
+// var sgTransport = require('nodemailer-sendgrid-transport');
 
-var options = {
-  auth: {
-    api_user: process.env.SENDGRID_ID,
-    api_key: process.env.SENDGRID_SECRET
-  }
-}
+// var options = {
+//   auth: {
+//     api_user: process.env.SENDGRID_ID,
+//     api_key: process.env.SENDGRID_SECRET
+//   }
+// }
+
 
 var client = nodemailer.createTransport({
     service: 'SendGrid',
@@ -17,17 +18,20 @@ var client = nodemailer.createTransport({
     }
 });
 
-var email = {
-  from: 'pegmickelson@gmail.com',
-  to: 'brendonbarringer@gmail.com',
-  subject: 'SWORDS for 2000',
-  text: 'Celebrity Jeopardy',
-  html: '<b>Hi from Peg!</b>'
-};
+var email;
 
 console.log(email);
 
-
+module.exports =  function(userEmail)
+{
+  email=
+  {
+    from: 'pegmickelson@gmail.com',
+    to: userEmail,
+    subject: 'Welcome to Karma!',
+    text: 'We are glad to have you here.',
+    html: '<b>Welcome to Karma!</b>'
+  },
 client.sendMail(email, function(err, info){
     if (err ){
       console.log(error);
@@ -35,4 +39,5 @@ client.sendMail(email, function(err, info){
     else {
       console.log('Message sent: ' + info.response);
     }
-});
+  });
+}

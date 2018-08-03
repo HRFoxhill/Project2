@@ -10,6 +10,11 @@ $light:rgb(250, 250, 250);
 @import "../../../node_modules/bulma/bulma.sass";
 
 
+
+.column-5{
+    padding-top:100px;
+}
+
 .footer-1{
    background-color: #842395
 }
@@ -321,6 +326,10 @@ body{
       top: 0px;
       width: 100%;
       z-index: 0;
+
+
+   
+
     }
 @keyframes
 imageAnimation {  

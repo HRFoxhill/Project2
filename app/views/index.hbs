@@ -48,7 +48,7 @@
             <div class="navbar-end">
                 <div class="navbar-item has-addons">
                     <p class="control">
-                        <a class=" button " target="_blank" href="#">
+                        <a class=" button " href="#table-container">
                             <span class="icon">
                                 <i class="fas fa-hands-helping"></i>
                             </span>
@@ -76,7 +76,8 @@
                                             <input class="input" type="text" placeholder="Text input" name="name">
                                         </div>
                                     </div>
-                                    {{!-- <div class="field">
+                                    {{!--
+                                    <div class="field">
                                         <label class="label">Skills Needed</label>
                                         <div class="control">
                                             <input class="input" type="text" placeholder="Text input" name="skills">
@@ -94,7 +95,8 @@
                                             <textarea class="textarea" placeholder="Textarea" name="description"></textarea>
                                         </div>
                                     </div>
-                                    {{!-- <div class="field">
+                                    {{!--
+                                    <div class="field">
                                         <div class="control">
                                             <label class="checkbox">
                                                 <input type="checkbox"> I agree to the
@@ -110,534 +112,621 @@
                         </div>
                     </div>
                     </form>
-{{# if errors }} {{# each errors }}
-<form method="post" action="/user/post"></form>
-<p class="alert alert-danger">{{ this.msg }}</p>
-{{/each}} {{/if}}
+                    {{# if errors }} {{# each errors }}
+                    <form method="post" action="/user/post"></form>
+                    <p class="alert alert-danger">{{ this.msg }}</p>
+                    {{/each}} {{/if}}
 
-
-                </div>
-                <div class="navbar-item is-grouped">
-                    <p class="control wallet">
-                        <a class="button is-static has-background-white has-text-black" target="_blank" href="#">
-                            <span class="icon">
-                                <i class="far fa-clock"></i>
-                            </span>
-                            <span>
-                                <strong>Balance: &nbsp;</strong>
-                                <span id='balance'>10.5 </span>
-                                <span>
-                                    <strong> hrs</strong>
+                    <div class="navbar-item is-grouped">
+                        <p class="control wallet">
+                            <a class="button is-static has-background-white has-text-black" target="_blank" href="#">
+                                <span class="icon">
+                                    <i class="far fa-clock"></i>
                                 </span>
-                            </span>
-                        </a>
-                    </p>
-                    <p class="control">
-                        <a class=" button has-text-black" target="_blank" href="#">
-                            <span class="icon">
-                                <i class="far fa-credit-card"></i>
-                            </span>
-                            <strong>
-                                Transactions
-                            </strong>
-                        </a>
-                    </p>
+                                <span>
+                                    <strong>Balance: &nbsp;</strong>
+                                    <span id='balance'>10.5 </span>
+                                    <span>
+                                        <strong> hrs</strong>
+                                    </span>
+                                </span>
+                            </a>
+                        </p>
+                        <p class="control">
+                            <a class=" button has-text-black" href="#table-container">
+                                <span class="icon">
+                                    <i class="far fa-credit-card"></i>
+                                </span>
+                                <strong>
+                                    Transactions
+                                </strong>
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
-
-        </div>
     </nav>
     </nav>
-</div>
+    </div>
 
 
-<!-- left-side fixed menu -->
-<aside class="menu box has-background-light has-text-dark">
-    <figure class="image is-96x96 avatar">
-        <img src="https://pbs.twimg.com/profile_images/693672457262071809/gcZ8gkZt_400x400.jpg" id='avatar-img'>
-    </figure>
-    <span class='welcome-text'>Jon Opacich</span>
-    <p class="menu-label section-nav">
-        Jump to Section
-    </p>
-    <ul class="menu-list">
-        <li>
-            <a class="is-active">Action Center</a>
-        </li>
-        <li>
-            <a>Community</a>
-        </li>
-        <li>
-            <a>Member</a>
-        </li>
-    </ul>
-    <p class="menu-label settings">
-        Settings
-    </p>
-    <ul class="menu-list">
-        <li>
-            <a>Update Profile</a>
-        </li>
-        <li>
-            <a>Log Out</a>
-        </li>
-    </ul>
-</aside>
-
-{{!-- future code below of activating the logout button via a post. logout route is included in userLogin.route.js --}} {{!--
-<form action="/logout" method="POST">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Logout">
-</form> --}}
-
-
-<div class="table-container">
-    <div class="balance-box">Balance:
-        <span id='balance'>10.5</span> Hrs</div>
-    <h1 class='title table-title'> Transaction History</h1>
-    <table class="table user-table is-hoverable is-bordered is-narrow">
-        <thead>
-            <th class='c1'>Title</th>
-            <th class='c2'>Working with</th>
-            <th class='c3'>Duration</th>
-            <th class='c4'>Skills</th>
-            <th class='c5'>Description</th>
-
-        </thead>
-        <tbody>
-            <tr class='deposit-background-color'>
-                <th class='c1'>Move to St. Louis Park</th>
-                <td class='c2'>Ronald McDonald</td>
-                <td class='c3'>2</td>
-                <td class='c4'>Able to lift heavy objects over 50 lbs.</td>
-                <td class='c5'>Lorem ipsum dolor dolorum corporis quasi vero perspiciatis dicta</td>
-
-            </tr>
-            <tr class='withdrawal-background-color'>
-                <th class='c1'>State Fair Car Show</th>
-                <td class='c2'>Community</td>
-                <td class='c3'>2</td>
-                <td class='c4'>Basic Car Knowledge</td>
-                <td class='c5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, consequuntur? Maiores placeat, officiis
-                    dolorum corporis quasi vero perspiciatis dicta</td>
-
-            </tr>
-        </tbody>
-    </table>
-    <h1 class='title table-title'>My Commitments</h1>
-    <table class="table user-table is-hoverable is-bordered is-narrow">
-        <thead>
-            <th class='c1'>Title</th>
-            <th class='c2'>Working with</th>
-            <th class='c3'>Duration</th>
-            <th class='c4'>Skills</th>
-            <th class='c5'>Description</th>
-
-        </thead>
-        <tbody>
-            <tr>
-                <th class='c1'>Move to St. Louis Park</th>
-                <td class='c2'>Ronald McDonald</td>
-                <td class='c3'>2</td>
-                <td class='c4'>Able to lift heavy objects over 50 lbs.</td>
-                <td class='c5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, consequuntur? Maiores placeat, officiis
-                    dolorum corporis quasi vero perspiciatis dicta, veniam consequuntur voluptate illum ad commodi aliquid
-                    maxime odit nulla minus.</td>
-
-            </tr>
-            <tr>
-                <th class='c1'>State Fair Car Show</th>
-                <td class='c2'>Community</td>
-                <td class='c3'>2</td>
-                <td class='c4'>Basic Car Knowledge</td>
-                <td class='c5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, consequuntur? Maiores placeat, officiis
-                    dolorum corporis quasi vero perspiciatis dicta, veniam consequuntur voluptate illum ad commodi aliquid
-                    maxime odit nulla minus.</td>
-
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-
-<!-- community title container -->
-<div class="community-title-container">
-    <p class="title column-title">Community Projects.
-        <br>
-        <span class="subtitle is-6">Gain Karma while making your area a happier place to live.</span>
-    </p>
-</div>
-
-<!-- community section header -->
-<section class='section' id='section-1'>
-    <div class="container">
-        <div class="columns">
-
-
-            <!-- column-2 -->
-            <div class="column column-2">
-
-
-                <!-- calhoon -->
-                <div class="card">
-                    <header class="card-header">
-                        <div class="card-header-icon">
-                            <figure class="image is-96x96 is-square card-avatar">
-                                <img src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=350" id='card-img'>
-                            </figure>
-                        </div>
-                        <h5 class="card-header-title is-centered title is-5">
-                            Lake Calhoon trail clean-up
-                        </h5>
-
-                    </header>
-                    <div class="card-content" id='card'>
-                        <div class="content">
-                            <ul>
-                                <li>
-                                    <strong>Skills Needed:</strong>
-                                    <span id="skills">Comfortable with moderate exercise</span>
-                                </li>
-                                <li>
-                                    <strong>Duration: </strong>
-                                    <span id="duration">1.5</span>
-                                    <strong>Hrs</strong>
-                                </li>
-                                <li id='content-area'>
-                                    <strong>Description:</strong>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
-                                    perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui sit
-                                    quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat
-                                    alias. Id quae corporis dolorum provident perferendis recusandae temporibus possimus
-                                    qui veritatis. Eligendi beatae quis qui sit quibusdam. Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident perferendis
-                                    recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui sit quibusdam.
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <footer class="card-footer">
-                        <span class="icon is-small" id='show-more'>
-                            <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
-                        </span>
-                        <a href="#" class="card-footer-item has-background-info has-text-light" style='z-index:0;'>
-                            <strong>Volunteer</strong>
-                        </a>
-                    </footer>
-                </div>
-
-                <!-- highway -->
-                <div class="card">
-                    <header class="card-header">
-                        <div class="card-header-icon">
-                            <figure class="image is-96x96 is-square card-avatar">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/HIghway_Chennai_Bangalore.jpg/248px-HIghway_Chennai_Bangalore.jpg"
-                                    id='card-img'>
-                            </figure>
-                        </div>
-                        <h5 class="card-header-title is-centered title is-5">
-                            Highway 8 Gardening
-                        </h5>
-
-                    </header>
-                    <div class="card-content" id='card'>
-                        <div class="content">
-                            <ul>
-                                <li>
-                                    <strong>Skills Needed: </strong>
-                                    <span id="skills">Advanced Gardening Knowledge, Comfortable with moderate exercise</span>
-                                </li>
-                                <li>
-                                    <strong>Duration: </strong>
-                                    <span id="duration">3</span>
-                                    <strong>Hrs</strong>
-                                </li>
-                                <li id='content-area'>
-                                    <strong>Description:</strong>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
-                                    perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui sit
-                                    quibusdam.
-                                </li>
-                            </ul>
-                        </div>
-
-
-                    </div>
-                    <footer class="card-footer">
-                        <span class="icon is-small" id='show-more'>
-                            <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
-                        </span>
-                        <a href="#" class="card-footer-item has-background-info has-text-light" style='z-index:0;'>
-                            <strong>Volunteer</strong>
-                        </a>
-                    </footer>
-                </div>
-
-
-            </div>
-
-
-            <!-- column-3 -->
-            <div class="column column-3" id='column-3'>
-
-                <!-- homeless shelter remodel -->
-                <div class="card">
-                    <header class="card-header">
-                        <div class="card-header-icon">
-                            <figure class="image is-96x96 is-square card-avatar">
-                                <img src="https://www.aacounty.org/sebin/n/c/homeless%20shelter.jpg" id='card-img'>
-                            </figure>
-                        </div>
-                        <h5 class="card-header-title is-centered title is-5">
-                            Texas Ave. Homeless Shelter Remodel
-                        </h5>
-
-                    </header>
-                    <div class="card-content" id='card'>
-                        <div class="content">
-                            <ul>
-                                <li>
-                                    <strong>Skills Needed:</strong>
-                                    <span id="skills">Carpentry</span>
-                                </li>
-                                <li>
-                                    <strong>Duration: </strong>
-                                    <span id="duration">2</span>
-                                    <strong>Hrs</strong>
-                                </li>
-                                <li id='content-area'>
-                                    <strong>Description:</strong>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
-                                    perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui sit
-                                    quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat
-                                    alias. Id quae corporis dolorum provident perferendis recusandae temporibus possimus
-                                    qui veritatis. Eligendi beatae quis qui sit quibusdam. Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident perferendis
-                                    recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui sit quibusdam.
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <footer class="card-footer">
-                        <span class="icon is-small" id='show-more'>
-                            <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
-                        </span>
-                        <a href="#" class="card-footer-item has-background-info has-text-light" style='z-index:0;'>
-                            <strong>Volunteer</strong>
-                        </a>
-                    </footer>
-                </div>
-
-
-                <!-- car show -->
-                <div class="card">
-                    <header class="card-header">
-                        <div class="card-header-icon">
-                            <figure class="image is-96x96 is-square card-avatar">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZoyJmMu6ujDksKeNfXMjAAaFQ2VCKgCte1PVSdlNSADNwowGm" id='card-img'>
-                            </figure>
-                        </div>
-                        <h5 class="card-header-title is-centered title is-5">
-                            State Fair Car Show
-                        </h5>
-                    </header>
-                    <div class="card-content" id='card'>
-                        <div class="content">
-                            <ul>
-                                <li>
-                                    <strong>Skills Needed:</strong>
-                                    <span id="skills">Basic Car Knowledge</span>
-                                </li>
-                                <li>
-                                    <strong>Duration: </strong>
-                                    <span id="duration">2.5</span>
-                                    <strong>Hrs</strong>
-                                </li>
-                                <li id='content-area'>
-                                    <strong>Description:</strong>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
-                                    perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui sit
-                                    quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat
-                                    alias. Id quae corporis dolorum provident perferendis recusandae temporibus possimus
-                                    qui veritatis. Eligendi beatae quis qui sit quibusdam. Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident perferendis
-                                    recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui sit quibusdam.
-                                </li>
-                            </ul>
-                        </div>
-
-
-                    </div>
-                    <footer class="card-footer">
-                        <span class="icon is-small" id='show-more'>
-                            <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
-                        </span>
-                        <a href="#" class="card-footer-item has-background-info has-text-light" style='z-index:0;'>
-                            <strong>Volunteer</strong>
-                        </a>
-                    </footer>
-                </div>
-
-            </div>
+    <!-- left-side fixed menu -->
+    <aside class="menu box has-background-light has-text-dark">
+        <figure class="image is-96x96 avatar">
+            <img src="https://cdn.shopify.com/s/files/1/2393/5817/products/469ea6ac-8b8f-4a84-8d36-b1a4ff2aba99_1400x.jpg?v=1525277568"
+                id='avatar-img'>
+        </figure>
+        <span class='welcome-text'>Pickle Rick</span>
+        <p class="menu-label section-nav">
+            Jump to Section
+        </p>
+        <ul class="menu-list">
+            <li>
+                <a class="is-active" href="#table-container">
+                    <i class="fas fa-flag"></i> Action Center</a>
+            </li>
+            <li>
+                <a href="#community-projects">
+                    <i class="fas fa-leaf"></i> Community</a>
+            </li>
+            <li>
+                <a href="#member">
+                    <i class="fas fa-users"></i> Member</a>
+            </li>
+        </ul>
+        <p class="menu-label settings">
+            Settings
+        </p>
+        <ul class="menu-list">
+            <li>
+                <a>
+                    <i class="fas fa-address-card"></i> Update Profile</a>
+            </li>
+            <li>
+                <a>
+                    <i class="fas fa-power-off"></i> Log Out</a>
+            </li>
+        </ul>
+    </aside>
 
 
 
-            <!-- column-4 -->
-            <div class="column column-4">
 
 
-                <!-- nursing home -->
-                <div class="card">
-                    <header class="card-header">
-                        <div class="card-header-icon">
-                            <figure class="image is-96x96 is-square card-avatar">
-                                <img src="https://www.salvilaw.com/wp-content/uploads/2015/02/467579835.jpg" id='card-img'>
-                            </figure>
-                        </div>
-                        <h5 class="card-header-title is-centered title is-5">
-                            Eisenhower Retirement Assistance
-                        </h5>
-                    </header>
-                    <div class="card-content" id='card'>
-                        <div class="content">
-                            <ul>
-                                <li>
-                                    <strong>Skills Needed:</strong>
-                                    <span id="skills">Comfortable with moderate exercise</span>
-                                </li>
-                                <li>
-                                    <strong>Duration: </strong>
-                                    <span id="duration">5</span>
-                                    <strong>Hrs</strong>
-                                </li>
-                                <li id='content-area'>
-                                    <strong>Description:</strong>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
-                                    perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui sit
-                                    quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat
-                                    alias. Id quae corporis dolorum provident perferendis recusandae temporibus possimus
-                                    qui veritatis. Eligendi beatae quis qui sit quibusdam. Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident perferendis
-                                    recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui sit quibusdam.
-                                </li>
-                            </ul>
-                        </div>
+    <div class="table-container" id='table-container'>
+        <div class="balance-box" id='balance-div'>Balance:
+            <span id='balance'>10.5</span> Hrs</div>
+        <h1 class='title table-title'> Transaction History</h1>
+        <table class="table user-table is-hoverable is-bordered is-narrow">
+            <thead>
+                <th class='c1'>Title</th>
+                <th class='c2'>Working with</th>
+                <th class=''>Duration</th>
+                <th class='c4'>Skills</th>
+                <th class='c5'>Description</th>
+
+            </thead>
+            <tbody>
+                <tr class='deposit-background-color'>
+                    <th class='c1'>Move to St. Louis Park</th>
+                    <td class='c2'>Ronald McDonald</td>
+                    <td class='c3 has-text-danger'>-1.5</td>
+                    <td class='c4'>Able to lift heavy objects over 50 lbs.</td>
+                    <td class='c5'>Lorem ipsum dolor dolorum corporis quasi vero perspiciatis dicta</td>
+
+                </tr>
+                <tr class='withdrawal-background-color'>
+                    <th class='c1'>State Fair Car Show</th>
+                    <td class='c2'>Community</td>
+                    <td class='c3 has-text-success'>+2.5</td>
+                    <td class='c4'>Basic Car Knowledge</td>
+                    <td class='c5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, consequuntur? Maiores placeat, officiis
+                        dolorum corporis quasi vero perspiciatis dicta</td>
+
+                </tr>
+            </tbody>
+        </table>
+        <h1 class='title table-title'>My Commitments</h1>
+        <table class="table user-table is-hoverable is-bordered is-narrow">
+            <thead>
+                <th class='c1'>Title</th>
+                <th class='c2'>Working with</th>
+                <th class=''>Duration</th>
+                <th class='c4'>Skills</th>
+                <th class='c5'>Description</th>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <th class='c1'>Move to St. Louis Park</th>
+                    <td class='c2'>Ronald McDonald</td>
+                    <td class='c3'>2</td>
+                    <td class='c4'>Able to lift heavy objects over 50 lbs.</td>
+                    <td class='c5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, consequuntur? Maiores placeat, officiis
+                        dolorum corporis quasi vero perspiciatis dicta, veniam consequuntur voluptate illum ad commodi aliquid
+                        maxime odit nulla minus.</td>
+
+                </tr>
+                <tr>
+                    <th class='c1'>State Fair Car Show</th>
+                    <td class='c2'>Community</td>
+                    <td class='c3'>3.5</td>
+                    <td class='c4'>Basic Car Knowledge</td>
+                    <td class='c5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, consequuntur? Maiores placeat, officiis
+                        dolorum corporis quasi vero perspiciatis dicta, veniam consequuntur voluptate illum ad commodi aliquid
+                        maxime odit nulla minus.</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 
-                    </div>
-                    <footer class="card-footer">
-                        <span class="icon is-small" id='show-more'>
-                            <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
-                        </span>
-                        <a href="#" class="card-footer-item has-background-info has-text-light" style='z-index:0;'>
-                            <strong>Volunteer</strong>
-                        </a>
-                    </footer>
-                </div>
-
-
-                <!-- volunteer life guard -->
-                <div class="card">
-                    <header class="card-header">
-                        <div class="card-header-icon">
-                            <figure class="image is-96x96 is-square card-avatar">
-                                <img src="data:image/jpeg;base64,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"
-                                    id='card-img'>
-                            </figure>
-                        </div>
-                        <h5 class="card-header-title is-centered title is-5">
-                            Lake Calhoon Volunteer Life Guard
-                        </h5>
-                    </header>
-                    <div class="card-content" id='card'>
-                        <div class="content">
-                            <ul>
-                                <li>
-                                    <strong>Skills Needed:</strong>
-                                    <span id="skills">Comfortable with moderate exercise</span>
-                                </li>
-                                <li>
-                                    <strong>Duration: </strong>
-                                    <span id="duration">2</span>
-                                    <strong>Hrs</strong>
-                                </li>
-                                <li id='content-area'>
-                                    <strong>Description:</strong>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
-                                    perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui sit
-                                    quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat
-                                    alias. Id quae corporis dolorum provident perferendis recusandae temporibus possimus
-                                    qui veritatis. Eligendi beatae quis qui sit quibusdam. Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident perferendis
-                                    recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui sit quibusdam.
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <footer class="card-footer">
-                        <span class="icon is-small" id='show-more'>
-                            <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
-                        </span>
-                        <a href="#" class="card-footer-item has-background-info has-text-light" style='z-index:0;'>
-                            <strong>Volunteer</strong>
-                        </a>
-                    </footer>
-                </div>
-            </div>
-</section>
-
-
-<!-- member title container -->
-<div class="member-title-container">
-    <p class="title column-title">Member Projects.
-        <br>
-        <span class="subtitle is-6">Help a neighbor, get helped later.</span>
-    </p>
-</div>
-
-
-<section class='section' id='section-2'>
-    <div class="container">
-        <div class="columns">
-
-
-            <!-- column-5 -->
-            <div class="column column-5" id='column-5'>
-
-            </div>
-
-
-            <!-- column-6 -->
-            <div class="column column-6" id='column-6'>
-
-            </div>
-
-
-
-            <!-- column-7 -->
-            <div class="column column-7" id='column-7'>
-
-            </div>
-
-
-        </div>
-</section>
-</div>
-
-<!-- footer -->
-<footer class="footer">
-    <div class="content has-text-centered footer-content">
-        <p>
-            <strong>Karma</strong> by
-            <a target="_blank" href="https://Opacich.com">Jonathan Opacich</a>,
-            <a href="https://jgthms.com">Brendan Berringer</a>,
-            <a href="https://jgthms.com">Peg Mickelson</a>,
-            <a href="https://jgthms.com">Heather Foxhill</a>. The source code is licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed
-            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    <!-- community title container -->
+    <div class="community-title-container" id='community-projects'>
+        <p class="title column-title has-text-white">Community Projects.
+            <br>
+            <span class="subtitle is-6 has-text-white">Gain Karma while making your area a happier place to live.</span>
         </p>
     </div>
-</footer>
+
+    <!-- community section header -->
+    <section class='section' id='section-1'>
+        <div class="container">
+            <div class="columns">
+
+
+                <!-- column-2 -->
+                <div class="column column-2">
+
+
+                    <!-- calhoon -->
+                    <div class="card">
+                        <header class="card-header">
+                            <div class="card-header-icon">
+                                <figure class="image is-96x96 is-square card-avatar">
+                                    <img src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=350" id='card-img'>
+                                </figure>
+                            </div>
+                            <h5 class="card-header-title is-centered title is-5">
+                                Lake Calhoon trail clean-up
+                            </h5>
+
+                        </header>
+                        <div class="card-content" id='card'>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <strong>Skills Needed:</strong>
+                                        <span id="skills">Comfortable with moderate exercise</span>
+                                    </li>
+                                    <li>
+                                        <strong>Duration: </strong>
+                                        <span id="duration">1.5</span>
+                                        <strong>Hrs</strong>
+                                    </li>
+                                    <li id='content-area'>
+                                        <strong>Description:</strong>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
+                                        perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui
+                                        sit quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod
+                                        iste placeat alias. Id quae corporis dolorum provident perferendis recusandae temporibus
+                                        possimus qui veritatis. Eligendi beatae quis qui sit quibusdam. Lorem ipsum dolor
+                                        sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis
+                                        dolorum provident perferendis recusandae temporibus possimus qui veritatis. Eligendi
+                                        beatae quis qui sit quibusdam.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer ">
+                            <span class="icon is-small" id='show-more'>
+                                <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
+                            </span>
+                            <a href="#" class="card-footer-item has-text-light footer-1" style='z-index:0;'>
+                                <strong>Volunteer</strong>
+                            </a>
+                        </footer>
+                    </div>
+
+                    <!-- highway -->
+                    <div class="card">
+                        <header class="card-header">
+                            <div class="card-header-icon">
+                                <figure class="image is-96x96 is-square card-avatar">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/HIghway_Chennai_Bangalore.jpg/248px-HIghway_Chennai_Bangalore.jpg"
+                                        id='card-img'>
+                                </figure>
+                            </div>
+                            <h5 class="card-header-title is-centered title is-5">
+                                Highway 8 Gardening
+                            </h5>
+
+                        </header>
+                        <div class="card-content" id='card'>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <strong>Skills Needed: </strong>
+                                        <span id="skills">Advanced Gardening Knowledge, Comfortable with moderate exercise</span>
+                                    </li>
+                                    <li>
+                                        <strong>Duration: </strong>
+                                        <span id="duration">3</span>
+                                        <strong>Hrs</strong>
+                                    </li>
+                                    <li id='content-area'>
+                                        <strong>Description:</strong>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
+                                        perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui
+                                        sit quibusdam.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer ">
+                            <span class="icon is-small" id='show-more'>
+                                <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
+                            </span>
+                            <a href="#" class="card-footer-item has-text-light footer-2" style='z-index:0;'>
+                                <strong>Volunteer</strong>
+                            </a>
+                        </footer>
+                    </div>
+
+
+                </div>
+
+
+                <!-- column-3 -->
+                <div class="column column-3" id='column-3'>
+
+                    <!-- homeless shelter remodel -->
+                    <div class="card">
+                        <header class="card-header">
+                            <div class="card-header-icon">
+                                <figure class="image is-96x96 is-square card-avatar">
+                                    <img src="https://www.aacounty.org/sebin/n/c/homeless%20shelter.jpg" id='card-img'>
+                                </figure>
+                            </div>
+                            <h5 class="card-header-title is-centered title is-5">
+                                Texas Ave. Homeless Shelter Remodel
+                            </h5>
+
+                        </header>
+                        <div class="card-content" id='card'>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <strong>Skills Needed:</strong>
+                                        <span id="skills">Carpentry</span>
+                                    </li>
+                                    <li>
+                                        <strong>Duration: </strong>
+                                        <span id="duration">2</span>
+                                        <strong>Hrs</strong>
+                                    </li>
+                                    <li id='content-area'>
+                                        <strong>Description:</strong>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
+                                        perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui
+                                        sit quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod
+                                        iste placeat alias. Id quae corporis dolorum provident perferendis recusandae temporibus
+                                        possimus qui veritatis. Eligendi beatae quis qui sit quibusdam. Lorem ipsum dolor
+                                        sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis
+                                        dolorum provident perferendis recusandae temporibus possimus qui veritatis. Eligendi
+                                        beatae quis qui sit quibusdam.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer ">
+                            <span class="icon is-small" id='show-more'>
+                                <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
+                            </span>
+                            <a href="#" class="card-footer-item has-text-light footer-3" style='z-index:0;'>
+                                <strong>Volunteer</strong>
+                            </a>
+                        </footer>
+                    </div>
+
+
+                    <!-- car show -->
+                    <div class="card">
+                        <header class="card-header">
+                            <div class="card-header-icon">
+                                <figure class="image is-96x96 is-square card-avatar">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZoyJmMu6ujDksKeNfXMjAAaFQ2VCKgCte1PVSdlNSADNwowGm" id='card-img'>
+                                </figure>
+                            </div>
+                            <h5 class="card-header-title is-centered title is-5">
+                                State Fair Car Show
+                            </h5>
+                        </header>
+                        <div class="card-content" id='card'>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <strong>Skills Needed:</strong>
+                                        <span id="skills">Basic Car Knowledge</span>
+                                    </li>
+                                    <li>
+                                        <strong>Duration: </strong>
+                                        <span id="duration">2.5</span>
+                                        <strong>Hrs</strong>
+                                    </li>
+                                    <li id='content-area'>
+                                        <strong>Description:</strong>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
+                                        perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui
+                                        sit quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod
+                                        iste placeat alias. Id quae corporis dolorum provident perferendis recusandae temporibus
+                                        possimus qui veritatis. Eligendi beatae quis qui sit quibusdam. Lorem ipsum dolor
+                                        sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis
+                                        dolorum provident perferendis recusandae temporibus possimus qui veritatis. Eligendi
+                                        beatae quis qui sit quibusdam.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer ">
+                            <span class="icon is-small" id='show-more'>
+                                <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
+                            </span>
+                            <a href="#" class="card-footer-item has-text-light footer-4" style='z-index:0;'>
+                                <strong>Volunteer</strong>
+                            </a>
+                        </footer>
+                    </div>
+
+                </div>
+
+
+
+                <!-- column-4 -->
+                <div class="column column-4">
+
+
+                    <!-- nursing home -->
+                    <div class="card">
+                        <header class="card-header">
+                            <div class="card-header-icon">
+                                <figure class="image is-96x96 is-square card-avatar">
+                                    <img src="https://www.salvilaw.com/wp-content/uploads/2015/02/467579835.jpg" id='card-img'>
+                                </figure>
+                            </div>
+                            <h5 class="card-header-title is-centered title is-5">
+                                Eisenhower Retirement Assistance
+                            </h5>
+                        </header>
+                        <div class="card-content" id='card'>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <strong>Skills Needed:</strong>
+                                        <span id="skills">Comfortable with moderate exercise</span>
+                                    </li>
+                                    <li>
+                                        <strong>Duration: </strong>
+                                        <span id="duration">5</span>
+                                        <strong>Hrs</strong>
+                                    </li>
+                                    <li id='content-area'>
+                                        <strong>Description:</strong>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
+                                        perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui
+                                        sit quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod
+                                        iste placeat alias. Id quae corporis dolorum provident perferendis recusandae temporibus
+                                        possimus qui veritatis. Eligendi beatae quis qui sit quibusdam. Lorem ipsum dolor
+                                        sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis
+                                        dolorum provident perferendis recusandae temporibus possimus qui veritatis. Eligendi
+                                        beatae quis qui sit quibusdam.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer ">
+                            <span class="icon is-small" id='show-more'>
+                                <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
+                            </span>
+                            <a href="#" class="card-footer-item has-text-light footer-5" style='z-index:0;'>
+                                <strong>Volunteer</strong>
+                            </a>
+                        </footer>
+                    </div>
+
+
+                    <!-- volunteer life guard -->
+                    <div class="card">
+                        <header class="card-header">
+                            <div class="card-header-icon">
+                                <figure class="image is-96x96 is-square card-avatar">
+                                    <img src="data:image/jpeg;base64,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"
+                                        id='card-img'>
+                                </figure>
+                            </div>
+                            <h5 class="card-header-title is-centered title is-5">
+                                Lake Calhoon Volunteer Life Guard
+                            </h5>
+                        </header>
+                        <div class="card-content" id='card'>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <strong>Skills Needed:</strong>
+                                        <span id="skills">Comfortable with moderate exercise</span>
+                                    </li>
+                                    <li>
+                                        <strong>Duration: </strong>
+                                        <span id="duration">2</span>
+                                        <strong>Hrs</strong>
+                                    </li>
+                                    <li id='content-area'>
+                                        <strong>Description:</strong>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
+                                        perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui
+                                        sit quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod
+                                        iste placeat alias. Id quae corporis dolorum provident perferendis recusandae temporibus
+                                        possimus qui veritatis. Eligendi beatae quis qui sit quibusdam. Lorem ipsum dolor
+                                        sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis
+                                        dolorum provident perferendis recusandae temporibus possimus qui veritatis. Eligendi
+                                        beatae quis qui sit quibusdam.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer ">
+                            <span class="icon is-small" id='show-more'>
+                                <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
+                            </span>
+                            <a href="#" class="card-footer-item has-text-light footer-6" style='z-index:0;'>
+                                <strong>Volunteer</strong>
+                            </a>
+                        </footer>
+                    </div>
+                </div>
+    </section>
+
+    <!-- member title container -->
+    <div class="member-title-container" id="member">
+        <p class="title column-title has-text-white">Member Projects.
+            <br>
+            <span class="subtitle is-6 has-text-white">Help a neighbor, get helped later.</span>
+        </p>
+    </div>
+
+    <section class='section' id='section-2'>
+        <div class="container">
+            <div class="columns">
+
+
+                <!-- column-5 -->
+                <div class="column column-5" id='column-5'>
+
+
+                     <div class="card">
+                        <header class="card-header">
+                            <div class="card-header-icon">
+                                <figure class="image is-96x96 is-square card-avatar">
+                                    <img src="https://static.giantbomb.com/uploads/scale_small/0/9517/2816097-tumblr_n45cr8dmj61ty0km0o7_1280.png"
+                                        id='card-img'>
+                                </figure>
+                            </div>
+                            <h5 class="card-header-title is-centered title is-5">
+                                Help Morty with Math!
+                            </h5>
+
+                        </header>
+                        <div class="card-content" id='card'>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <strong>Skills Needed: </strong>
+                                        <span id="skills">Oh geez...idk</span>
+                                    </li>
+                                    <li>
+                                        <strong>Duration: </strong>
+                                        <span id="duration">5</span>
+                                        <strong>Hrs</strong>
+                                    </li>
+                                    <li id='content-area'>
+                                        <strong>Description:</strong>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
+                                        perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui
+                                        sit quibusdam.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer ">
+                            <span class="icon is-small" id='show-more'>
+                                <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
+                            </span>
+                            <a href="#" class="card-footer-item has-text-light footer-2" style='z-index:0;'>
+                                <strong>Volunteer</strong>
+                            </a>
+                        </footer>
+                    </div>
+
+
+                </div>
+
+
+                <!-- column-6 -->
+                <div class="column column-6" id='column-6'>
+
+
+                                        <div class="card">
+                        <header class="card-header">
+                            <div class="card-header-icon">
+                                <figure class="image is-96x96 is-square card-avatar">
+                                    <img src="https://vignette.wikia.nocookie.net/rickandmorty/images/4/46/Jerrypic.png/revision/latest?cb=20140129041526" id='card-img'>
+                                </figure>
+                            </div>
+                            <h5 class="card-header-title is-centered title is-5">
+                                Turn on my mower
+                            </h5>
+                        </header>
+                        <div class="card-content" id='card'>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <strong>Skills Needed:</strong>
+                                        <span id="skills">Good with sensitive people, Advanced Mowerology degree</span>
+                                    </li>
+                                    <li>
+                                        <strong>Duration: </strong>
+                                        <span id="duration">2</span>
+                                        <strong>Hrs</strong>
+                                    </li>
+                                    <li id='content-area'>
+                                        <strong>Description:</strong>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis dolorum provident
+                                        perferendis recusandae temporibus possimus qui veritatis. Eligendi beatae quis qui
+                                        sit quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod
+                                        iste placeat alias. Id quae corporis dolorum provident perferendis recusandae temporibus
+                                        possimus qui veritatis. Eligendi beatae quis qui sit quibusdam. Lorem ipsum dolor
+                                        sit amet consectetur adipisicing elit. Dolor quod iste placeat alias. Id quae corporis
+                                        dolorum provident perferendis recusandae temporibus possimus qui veritatis. Eligendi
+                                        beatae quis qui sit quibusdam.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer ">
+                            <span class="icon is-small" id='show-more'>
+                                <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
+                            </span>
+                            <a href="#" class="card-footer-item has-text-light footer-5" style='z-index:0;'>
+                                <strong>Volunteer</strong>
+                            </a>
+                        </footer>
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- column-7 -->
+                <div class="column column-7" id='column-7'>
+
+                </div>
+            </div>
+    </section>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="content has-text-centered footer-content">
+            <p>
+                <strong>Karma</strong> by
+                <a target="_blank" href="https://Opacich.com">Jonathan Opacich</a>,
+                <a href="https://jgthms.com">Brendan Berringer</a>,
+                <a href="https://notoriouspeg.github.io/Responsive-Portfolio/">Peg Mickelson</a>,
+                <a href="https://www.elegantthemes.com/blog/wp-content/uploads/2017/07/404-error.png">Heather Foxhill</a>. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed
+                <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
+        </div>
+    </footer>

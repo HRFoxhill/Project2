@@ -15,8 +15,5 @@ module.exports = function(sequelize, DataTypes) {
       });
     };
     
-      User.hasMany(models.Skills, {
-        onDelete: "cascade"
-      })
     return User;
   };

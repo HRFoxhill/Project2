@@ -47,16 +47,16 @@ app.listen(PORT, function(req, res){
 })
 });
 
-//user login/verification and session Id route
-const login = require('./app/routes/userLogin.route');
-app.use('/login',login);
+// //user login/verification and session Id route
+// const login = require('./app/routes/userLogin.route');
+// app.use('/login',login);
 
-app.get('/', function(req, res){
-    console.log("session email " + req.session.email)
-    res.send('hello');
- });
-db.sequelize.sync().then(function() {
-app.listen(PORT, function(req, res){
-   console.log('Server is running on PORT: ',PORT);
-})
-});
+// app.get('/', function(req, res){
+//     console.log("session email " + req.session.email)
+//     res.send('hello');
+//  });
+// db.sequelize.sync().then(function() {
+// app.listen(PORT, function(req, res){
+//    console.log('Server is running on PORT: ',PORT);
+// })
+// });

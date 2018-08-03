@@ -32,7 +32,7 @@ Attached are screenshots to walk you through our application.
 
 ![Login screen](https://github.com/HRFoxhill/Project2/blob/master/Screenshot1.JPG)
 
-[Commitments, Balance, Transactions](https://github.com/HRFoxhill/Project2/blob/master/screenshot2.JPG) - Commitments, Balance, Transactions
+![Commitments, Balance, Transactions](https://github.com/HRFoxhill/Project2/blob/master/screenshot2.JPG) - Commitments, Balance, Transactions
 
 [Transactions and Balances - Detailed](https://github.com/HRFoxhill/Project2/blob/master/screenshot3.JPG) - Transactions and Balances - Detailed
 

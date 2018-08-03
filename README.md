@@ -1,8 +1,14 @@
-**Project Karma**
+## **Project Karma**
+
+------
 
 Karma is a community engagement and service-exchange application that utilizes time as currency.  We believe everyone's time is valuable and Karma allows neighbors to share their talents and improve their overall community.
 
-**Project Requirements**
+## **Project Requirements**
+
+------
+
+
 
 - Use a Node and Express Web Server;
 - Be backed by a MySQL Database an ORM (not necessarily Sequelize);
@@ -14,11 +20,17 @@ Karma is a community engagement and service-exchange application that utilizes t
 - Meet good quality coding standards (indentation, scoping, naming).
 - Must not expose sensitive API key information on the server
 
-**Deployment**
+## **Deployment**
+
+------
 
 Heroku with Jaws DB
 
-**Built With**
+## **Built With**
+
+------
+
+
 
 - ***Nodemailer*** is a module for Node.js applications to allow easy as cake email sending. In combination with *SendGrid* it allows for automated responsive communications based on users' system interaction.
 
@@ -34,17 +46,28 @@ Heroku with Jaws DB
 - ***Sequelize ORM***
 - ***Handlebars***
 
-##### **Engineers**
+## **Engineers**
+
+------
+
+
 
 - Brendon Barringer
 - Heather Foxhill
 - Peg Mickelson
 - Jon Opacich
 
-**Acknowledgments**
-Thank you to Katie Campbell, Rory Hager and Joe Kanter  -- instructors, tech guides extraordinaire
+## **Acknowledgments**
 
-**Screenshots to walk you through our application.**
+------
+
+Thank you to Katie Campbell, Rory Hager and Joe Kanter  -- instructors and tech guide extraordinaires
+
+## **Screenshots to walk you through our application.**
+
+------
+
+
 
 1. ##### *=== Login page* ![Login screen](https://github.com/HRFoxhill/Project2/blob/master/Screenshot1.JPG)
 

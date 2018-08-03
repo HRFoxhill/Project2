@@ -156,15 +156,15 @@
         <p class="menu-label section-nav">
             Jump to Section
         </p>
-        <ul class="menu-list">
+        <ul class="menu-list"> 
             <li>
-                <a class="is-active">Action Center</a>
+                <a class="is-active" href="/home/#balance-div"><i class="fas fa-flag"></i> Action Center</a>
             </li>
             <li>
-                <a>Community</a>
+                <a><i class="fas fa-leaf"></i> Community</a>
             </li>
             <li>
-                <a>Member</a>
+                <a><i class="fas fa-users"></i> Member</a>
             </li>
         </ul>
         <p class="menu-label settings">
@@ -172,10 +172,10 @@
         </p>
         <ul class="menu-list">
             <li>
-                <a>Update Profile</a>
+                <a><i class="fas fa-address-card"></i> Update Profile</a>
             </li>
             <li>
-                <a>Log Out</a>
+                <a><i class="fas fa-power-off"></i> Log Out</a>
             </li>
         </ul>
     </aside>
@@ -185,14 +185,14 @@
 
 
     <div class="table-container">
-        <div class="balance-box">Balance:
+        <div class="balance-box" id='balance-div'>Balance:
             <span id='balance'>10.5</span> Hrs</div>
         <h1 class='title table-title'> Transaction History</h1>
         <table class="table user-table is-hoverable is-bordered is-narrow">
             <thead>
                 <th class='c1'>Title</th>
                 <th class='c2'>Working with</th>
-                <th class='c3'>Duration</th>
+                <th class=''>Duration</th>
                 <th class='c4'>Skills</th>
                 <th class='c5'>Description</th>
 
@@ -201,7 +201,7 @@
                 <tr class='deposit-background-color'>
                     <th class='c1'>Move to St. Louis Park</th>
                     <td class='c2'>Ronald McDonald</td>
-                    <td class='c3'>2</td>
+                    <td class='c3 has-text-danger'>-1.5</td>
                     <td class='c4'>Able to lift heavy objects over 50 lbs.</td>
                     <td class='c5'>Lorem ipsum dolor dolorum corporis quasi vero perspiciatis dicta</td>
 
@@ -209,7 +209,7 @@
                 <tr class='withdrawal-background-color'>
                     <th class='c1'>State Fair Car Show</th>
                     <td class='c2'>Community</td>
-                    <td class='c3'>2</td>
+                    <td class='c3 has-text-success'>+2.5</td>
                     <td class='c4'>Basic Car Knowledge</td>
                     <td class='c5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, consequuntur? Maiores placeat, officiis
                         dolorum corporis quasi vero perspiciatis dicta</td>
@@ -222,7 +222,7 @@
             <thead>
                 <th class='c1'>Title</th>
                 <th class='c2'>Working with</th>
-                <th class='c3'>Duration</th>
+                <th class=''>Duration</th>
                 <th class='c4'>Skills</th>
                 <th class='c5'>Description</th>
 
@@ -241,7 +241,7 @@
                 <tr>
                     <th class='c1'>State Fair Car Show</th>
                     <td class='c2'>Community</td>
-                    <td class='c3'>2</td>
+                    <td class='c3'>3.5</td>
                     <td class='c4'>Basic Car Knowledge</td>
                     <td class='c5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, consequuntur? Maiores placeat, officiis
                         dolorum corporis quasi vero perspiciatis dicta, veniam consequuntur voluptate illum ad commodi aliquid
@@ -255,9 +255,9 @@
 
     <!-- community title container -->
     <div class="community-title-container">
-        <p class="title column-title">Community Projects.
+        <p class="title column-title has-text-white">Community Projects.
             <br>
-            <span class="subtitle is-6">Gain Karma while making your area a happier place to live.</span>
+            <span class="subtitle is-6 has-text-white">Gain Karma while making your area a happier place to live.</span>
         </p>
     </div>
 
@@ -310,11 +310,11 @@
                                 </ul>
                             </div>
                         </div>
-                        <footer class="card-footer">
+                        <footer class="card-footer ">
                             <span class="icon is-small" id='show-more'>
                                 <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
                             </span>
-                            <a href="#" class="card-footer-item has-background-info has-text-light" style='z-index:0;'>
+                            <a href="#" class="card-footer-item has-text-light footer-1" style='z-index:0;'>
                                 <strong>Volunteer</strong>
                             </a>
                         </footer>
@@ -355,11 +355,11 @@
                                 </ul>
                             </div>
                         </div>
-                        <footer class="card-footer">
+                        <footer class="card-footer ">
                             <span class="icon is-small" id='show-more'>
                                 <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
                             </span>
-                            <a href="#" class="card-footer-item has-background-info has-text-light" style='z-index:0;'>
+                            <a href="#" class="card-footer-item has-text-light footer-2" style='z-index:0;'>
                                 <strong>Volunteer</strong>
                             </a>
                         </footer>
@@ -411,11 +411,11 @@
                                 </ul>
                             </div>
                         </div>
-                        <footer class="card-footer">
+                        <footer class="card-footer ">
                             <span class="icon is-small" id='show-more'>
                                 <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
                             </span>
-                            <a href="#" class="card-footer-item has-background-info has-text-light" style='z-index:0;'>
+                            <a href="#" class="card-footer-item has-text-light footer-3" style='z-index:0;'>
                                 <strong>Volunteer</strong>
                             </a>
                         </footer>
@@ -460,11 +460,11 @@
                                 </ul>
                             </div>
                         </div>
-                        <footer class="card-footer">
+                        <footer class="card-footer ">
                             <span class="icon is-small" id='show-more'>
                                 <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
                             </span>
-                            <a href="#" class="card-footer-item has-background-info has-text-light" style='z-index:0;'>
+                            <a href="#" class="card-footer-item has-text-light footer-4" style='z-index:0;'>
                                 <strong>Volunteer</strong>
                             </a>
                         </footer>
@@ -516,11 +516,11 @@
                                 </ul>
                             </div>
                         </div>
-                        <footer class="card-footer">
+                        <footer class="card-footer ">
                             <span class="icon is-small" id='show-more'>
                                 <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
                             </span>
-                            <a href="#" class="card-footer-item has-background-info has-text-light" style='z-index:0;'>
+                            <a href="#" class="card-footer-item has-text-light footer-5" style='z-index:0;'>
                                 <strong>Volunteer</strong>
                             </a>
                         </footer>
@@ -566,11 +566,11 @@
                                 </ul>
                             </div>
                         </div>
-                        <footer class="card-footer">
+                        <footer class="card-footer ">
                             <span class="icon is-small" id='show-more'>
                                 <i class="fas fa-angle-down fa-3x" aria-hidden="true"></i>
                             </span>
-                            <a href="#" class="card-footer-item has-background-info has-text-light" style='z-index:0;'>
+                            <a href="#" class="card-footer-item has-text-light footer-6" style='z-index:0;'>
                                 <strong>Volunteer</strong>
                             </a>
                         </footer>
@@ -580,9 +580,9 @@
 
     <!-- member title container -->
     <div class="member-title-container">
-        <p class="title column-title">Member Projects.
+        <p class="title column-title has-text-white">Member Projects.
             <br>
-            <span class="subtitle is-6">Help a neighbor, get helped later.</span>
+            <span class="subtitle is-6 has-text-white">Help a neighbor, get helped later.</span>
         </p>
     </div>
 
@@ -619,8 +619,8 @@
                 <strong>Karma</strong> by
                 <a target="_blank" href="https://Opacich.com">Jonathan Opacich</a>,
                 <a href="https://jgthms.com">Brendan Berringer</a>,
-                <a href="https://jgthms.com">Peg Mickelson</a>,
-                <a href="https://jgthms.com">Heather Foxhill</a>. The source code is licensed
+                <a href="https://notoriouspeg.github.io/Responsive-Portfolio/">Peg Mickelson</a>,
+                <a href="https://www.elegantthemes.com/blog/wp-content/uploads/2017/07/404-error.png">Heather Foxhill</a>. The source code is licensed
                 <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed
                 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
             </p>

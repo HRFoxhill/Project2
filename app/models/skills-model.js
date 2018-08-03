@@ -7,7 +7,12 @@
 
 module.exports = function(sequelize, DataTypes) {
     var Skills = sequelize.define("Skills", {
-        skill_category: {type: DataTypes.STRING, allowNull: false}
+        catskinner: {type: DataTypes.BOOLEAN, allowNull:false},
+        drinker: {type: DataTypes.BOOLEAN, allowNull:false},
+        lightcaresser: {type: DataTypes.BOOLEAN, allowNull:false},
+        painter: {type: DataTypes.BOOLEAN, allowNull:false},
+        catpetter: {type: DataTypes.BOOLEAN, allowNull:false},
+        dogpetter: {type: DataTypes.BOOLEAN, allowNull:false}
     });
     return Skills
 }

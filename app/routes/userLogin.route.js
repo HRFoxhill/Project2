@@ -1,5 +1,7 @@
+
 const express = require('express');
 const app =  express.Router();
+
 
 //LOGIN FORM
 app.get('/', function (req, res) {
@@ -21,8 +23,24 @@ app.post('/add', function (req, res) {
     });
 });
 
+
+    //if user found.
+    if (user.length!=0) {
+      if(user[0].email){
+        console.log('User  exists!');                         
+         }else{
+            console.log('User does not exist, try again or please sign up: ');      
+         }                                    
+         var err = new Error();
+        err.status = 310;
+        return done(err);
+
+    }
+
+
 //LOGOUT
 app.delete('/logout', function (req, res) {
     req.session.currentUser = null;
     res.redirect('/');
+
 });

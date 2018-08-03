@@ -1,4 +1,4 @@
-User.find({ 'passowrd': password,'email':email }, function(err, user) {
+User.findOne({'email':email, 'password': password}, function(err, user) {
 
     if (err) {
 
@@ -18,3 +18,5 @@ User.find({ 'passowrd': password,'email':email }, function(err, user) {
         return done(err);
 
     }
+
+});

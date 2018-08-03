@@ -20,22 +20,21 @@ Heroku with Jaws DB
 
 **Built With**
 
-***Nodemailer*** is a module for Node.js applications to allow easy as cake email sending. In combination with *SendGrid* it allows for automated responsive communications based on users' system interaction.
+- ***Nodemailer*** is a module for Node.js applications to allow easy as cake email sending. In combination with *SendGrid* it allows for automated responsive communications based on users' system interaction.
 
-***NodeValidator, NodeSessions & NodeCookies***
-A combination of these 3 plugins allows for data validation, session tracking, page to page data retention and login/logout authentication.
+- ***NodeValidator, NodeSessions & NodeCookies***
+  A combination of these 3 plugins allows for data validation, session tracking, page to page data retention and login/logout authentication.
 
-***Bulma*** is a CSS framework like bootstrap that does not utilize javascript.
+- ***Bulma*** is a CSS framework like bootstrap that does not utilize javascript.
 
-***Sass*** is a CSS extension that allows easibility to editing your pages as well as a library of functionalities that make management of your front end simple and concise.
+- ***Sass*** is a CSS extension that allows easibility to editing your pages as well as a library of functionalities that make management of your front end simple and concise.
 
-Node and Express
-MySQL
-Sequelize ORM
-Handlebars
+- ***Node and Express***
+- ***MySQL***
+- ***Sequelize ORM***
+- ***Handlebars***
 
-
-**Engineers**
+##### **Engineers**
 
 - Brendon Barringer
 - Heather Foxhill
@@ -47,27 +46,19 @@ Thank you to Katie Campbell, Rory Hager and Joe Kanter  -- instructors, tech gui
 
 **Screenshots to walk you through our application.**
 
-*=== Login page* 
-![Login screen](https://github.com/HRFoxhill/Project2/blob/master/Screenshot1.JPG)
+1. ##### *=== Login page* [Login screen](https://github.com/HRFoxhill/Project2/blob/master/Screenshot1.JPG)
 
+2. ##### *===  Commitments, Balance, Transactions* ![Commitments, Balance, Transactions](https://github.com/HRFoxhill/Project2/blob/master/Screenshot2.JPG)
 
-*===  Commitments, Balance, Transactions* ![Commitments, Balance, Transactions](https://github.com/HRFoxhill/Project2/blob/master/Screenshot2.JPG)
+3. ##### *===  Transactions and Balances - Detailed* ![Transactions and Balances - Detailed](https://github.com/HRFoxhill/Project2/blob/master/Screenshot3.JPG)
 
+4. ##### *===  Community Projects - Detailed*![Community Projects - Detailed](https://github.com/HRFoxhill/Project2/blob/master/Screenshot4.JPG)
 
-*===  Transactions and Balances - Detailed* ![Transactions and Balances - Detailed](https://github.com/HRFoxhill/Project2/blob/master/Screenshot3.JPG)
+5. ##### *===  Member Projects - Detailed*![Member Projects - Detailed](https://github.com/HRFoxhill/Project2/blob/master/Screenshot5.JPG)
 
+6. ##### *===  Nodemailer code*![Nodemailer](https://github.com/HRFoxhill/Project2/blob/master/Screenshot6.JPG)
 
-*===  Community Projects - Detailed*![Community Projects - Detailed](https://github.com/HRFoxhill/Project2/blob/master/Screenshot4.JPG)
+7. ##### *===  Welcome Email Example*![Welcome Email](https://github.com/HRFoxhill/Project2/blob/master/Screenshot7.JPG)
 
-
-*===  Member Projects - Detailed*![Member Projects - Detailed](https://github.com/HRFoxhill/Project2/blob/master/Screenshot5.JPG)
-
-
-*===  Nodemailer code*![Nodemailer](https://github.com/HRFoxhill/Project2/blob/master/Screenshot6.JPG)
-
-
-*===  Welcome Email Example*![Welcome Email](https://github.com/HRFoxhill/Project2/blob/master/Screenshot7.JPG)
-
-
-*===  Sendgrid Activity Dashboard*![Sendgrid](https://github.com/HRFoxhill/Project2/blob/master/Screenshot8.JPG)
+8. ##### *===  Sendgrid Activity Dashboard*![Sendgrid](https://github.com/HRFoxhill/Project2/blob/master/Screenshot8.JPG)
 

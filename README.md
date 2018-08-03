@@ -69,19 +69,19 @@ Thank you to Katie Campbell, Rory Hager and Joe Kanter  -- instructors and tech 
 
 
 
-1. ##### *=== Login page* ![Login screen](https://github.com/HRFoxhill/Project2/blob/master/Screenshot1.JPG)
+1. ##### *=== Login page* ![Login screen](https://github.com/HRFoxhill/Project2/blob/master/app/public/images/Screenshot1.JPG)
 
-2. ##### *===  Commitments, Balance, Transactions* ![Commitments, Balance, Transactions](https://github.com/HRFoxhill/Project2/blob/master/Screenshot2.JPG)
+2. ##### *===  Commitments, Balance, Transactions* ![Commitments, Balance, Transactions](https://github.com/HRFoxhill/Project2/blob/master/app/public/images/Screenshot2.JPG)
 
-3. ##### *===  Transactions and Balances - Detailed* ![Transactions and Balances - Detailed](https://github.com/HRFoxhill/Project2/blob/master/Screenshot3.JPG)
+3. ##### *===  Transactions and Balances - Detailed* ![Transactions and Balances - Detailed](https://github.com/HRFoxhill/Project2/blob/master/app/public/images/Screenshot3.JPG)
 
-4. ##### *===  Community Projects - Detailed*![Community Projects - Detailed](https://github.com/HRFoxhill/Project2/blob/master/Screenshot4.JPG)
+4. ##### *===  Community Projects - Detailed*![Community Projects - Detailed](https://github.com/HRFoxhill/Project2/blob/master/app/public/images/Screenshot4.JPG)
 
-5. ##### *===  Member Projects - Detailed*![Member Projects - Detailed](https://github.com/HRFoxhill/Project2/blob/master/Screenshot5.JPG)
+5. ##### *===  Member Projects - Detailed*![Member Projects - Detailed](https://github.com/HRFoxhill/Project2/blob/master/app/public/images/Screenshot5.JPG)
 
-6. ##### *===  Nodemailer code*![Nodemailer](https://github.com/HRFoxhill/Project2/blob/master/Screenshot6.JPG)
+6. ##### *===  Nodemailer code*![Nodemailer](https://github.com/HRFoxhill/Project2/blob/master/app/public/images/Screenshot6.JPG)
 
-7. ##### *===  Welcome Email Example*![Welcome Email](https://github.com/HRFoxhill/Project2/blob/master/Screenshot7.JPG)
+7. ##### *===  Welcome Email Example*![Welcome Email](https://github.com/HRFoxhill/Project2/blob/master/app/public/images/Screenshot7.JPG)
 
-8. ##### *===  Sendgrid Activity Dashboard*![Sendgrid](https://github.com/HRFoxhill/Project2/blob/master/Screenshot8.JPG)
+8. ##### *===  Sendgrid Activity Dashboard*![Sendgrid](https://github.com/HRFoxhill/Project2/blob/master/app/public/images/Screenshot8.JPG)
 

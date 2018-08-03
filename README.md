@@ -46,7 +46,7 @@ Thank you to Katie Campbell, Rory Hager and Joe Kanter  -- instructors, tech gui
 
 **Screenshots to walk you through our application.**
 
-1. ##### *=== Login page* [Login screen](https://github.com/HRFoxhill/Project2/blob/master/Screenshot1.JPG)
+1. ##### *=== Login page* ![Login screen](https://github.com/HRFoxhill/Project2/blob/master/Screenshot1.JPG)
 
 2. ##### *===  Commitments, Balance, Transactions* ![Commitments, Balance, Transactions](https://github.com/HRFoxhill/Project2/blob/master/Screenshot2.JPG)
 

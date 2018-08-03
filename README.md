@@ -43,7 +43,11 @@ Thank you to Katie Campbell, Rory Hager and Joe Kanter  -- instructors, tech gui
 
 === Login page ![Login screen](https://github.com/HRFoxhill/Project2/blob/master/Screenshot1.JPG)
 
+<<<<<<< HEAD
 ===  Commitments, Balance, Transactions ![Commitments, Balance, Transactions](https://github.com/HRFoxhill/Project2/blob/master/screenshot2.JPG)
+=======
+![Commitments, Balance, Transactions](https://github.com/HRFoxhill/Project2/blob/master/screenshot2.JPG) - Commitments, Balance, Transactions
+>>>>>>> 8a97a0be15c7b630a5c22db4544476317005a196
 
 ===  Transactions and Balances - Detailed ![Transactions and Balances - Detailed](https://github.com/HRFoxhill/Project2/blob/master/screenshot3.JPG)
 

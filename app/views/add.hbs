@@ -1,34 +1,5 @@
- {{!--
-<div class="container">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      Create User
-    </div>
-    <div class="panel-body">
-      <form method="post" action="/user/add">
-        <div class="form-group">
-          <label class="col-md-4">Full Name</label>
-          <input type="text" class="form-control" name="name" />
-        </div>
-        <div class="form-group">
-          <label class="col-md-4">Email</label>
-          <input type="text" class="form-control" name="email" />
-        </div>
-        <div class="form-group">
-          <label class="col-md-4">Password</label>
-          <input type="text" class="form-control" name="password" />
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary">Add User</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div> --}}
-
-<form method="post" action="/user/login"></form>
 <div class="form-collection">
-  <div class="card elevation-3 limit-width log-in-card below turned">
+  <div class="card elevation-3 limit-width log-in-card below turned" id="login">
     <div class="card-body">
       <div class="input-group email">
         <input type="text" placeholder="Email" name="email" />
@@ -39,36 +10,25 @@
       <a href="#" class="box-btn">Forgot Password?</a>
     </div>
     <div class="card-footer">
-      <button type="submit" class="login-btn">Log in</button>
+      <button class="login-btn">Log in</button>
     </div>
   </div>
-  </form>
-  <form method="post" action="/user/add">
-    <div class="card elevation-2 limit-width sign-up-card above">
-      <div class="card-body">
-        <div class="input-group fullname">
-          <input type="text" placeholder="Name" name="name" />
-        </div>
-        <div class="input-group email">
-          <input type="email" placeholder="Email" name="email" />
-        </div>
-        <div class="input-group password">
-          <input type="password" placeholder="Password" name="password" />
-        </div>
+
+
+  <div class="card elevation-2 limit-width sign-up-card above" id="signup">
+    <div class="card-body">
+      <div class="input-group fullname">
+        <input type="text" placeholder="Name" name="name" />
       </div>
-      <div class="card-footer">
-        <button type="submit" class="signup-btn">Sign Up</button>
+      <div class="input-group email">
+        <input type="email" placeholder="Email" name="email" />
+      </div>
+      <div class="input-group password">
+        <input type="password" placeholder="Password" name="password" />
       </div>
     </div>
+    <div class="card-footer">
+      <button class="signup-btn">Sign Up</button>
+    </div>
+  </div>
 </div>
-</form>
-
-{{# if errors }} {{# each errors }}
-<form method="post" action="/user/post"></form>
-<p class="alert alert-danger">{{ this.msg }}</p>
-{{/each}} {{/if}}
-
-{{# if errors }} {{# each errors }}
-<form method="post" action="/user/login"></form>
-<p class="alert alert-danger">{{ this.msg }}</p>
-{{/each}} {{/if}}

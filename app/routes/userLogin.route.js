@@ -1,16 +1,10 @@
-
+var path = require("path");
 const express = require('express');
-const app =  express.Router();
+const router =  express.Router();
 
-
-//LOGIN FORM
-app.get('/', function (req, res) {
-    res.render('add', {errors: req.session.errors});
-    req.session.errors = null;
-});
 
 //LOGIN POST
-app.post('/add', function (req, res) {
+router.post('/login', function (req, res) {
     User.find(req.body.email, function (user) {
         bcrypt.compare(req.body.password, user.password, function (err, result) {
             if (result) {
@@ -24,7 +18,7 @@ app.post('/add', function (req, res) {
 });
 
 
-    //if user found.
+    // if user found.
     if (user.length!=0) {
       if(user[0].email){
         console.log('User  exists!');                         
@@ -34,13 +28,13 @@ app.post('/add', function (req, res) {
          var err = new Error();
         err.status = 310;
         return done(err);
-
     }
 
 
 //LOGOUT
-app.delete('/logout', function (req, res) {
+router.post('/logout', function (req, res) {
     req.session.currentUser = null;
-    res.redirect('/');
-
+    res.sendStatus(200);
 });
+
+module.exports = router;

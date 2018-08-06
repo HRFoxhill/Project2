@@ -20,4 +20,32 @@ $(function () {
             }, 10)
         }, 300);
     })
+
+
+
+    $('.form-collection').on('click', '.above button', (event) => {
+
+        if ($('#login').hasClass('above')) {
+
+            let user = {
+                email: $("#duration-input").val().trim(),
+                password: $("#description-input").val(),
+            }
+
+            $.post("/user/login", user, function () {
+
+              
+               
+
+
+            });
+
+        }
+        else {
+            //
+        }
+
+
+
+    })
 })

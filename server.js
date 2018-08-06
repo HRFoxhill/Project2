@@ -36,18 +36,12 @@ const register = require('./app/routes/userCreate.route');
 app.use('/register', register);
 
 //already registered user route
-const login = require('./app/routes/userCreate.route');
-app.use('/login', login);
+const login = require('./app/routes/userLogin.route');
+app.use('/user', login);
 
 //create project route
-const projects = require('./app/routes/userLogin.route');
+const projects = require('./app/routes/projectCreate.route');
 app.use('/project', projects);
-
-// // node mailer route
-// app.get('/', function (req, res) {
-//   console.log("session email " + req.session.email)
-//   res.send('hello');
-// });
 
 // 
 sequelize.sync()

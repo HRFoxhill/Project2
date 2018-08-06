@@ -1,13 +1,7 @@
-
+var path = require("path");
 const express = require('express');
 const router =  express.Router();
 
-
-//LOGIN FORM
-router.get('/', function (req, res) {
-    res.render('add', {errors: req.session.errors});
-    req.session.errors = null;
-});
 
 //LOGIN POST
 router.post('/login', function (req, res) {
@@ -24,7 +18,7 @@ router.post('/login', function (req, res) {
 });
 
 
-    //if user found.
+    // if user found.
     if (user.length!=0) {
       if(user[0].email){
         console.log('User  exists!');                         
@@ -34,15 +28,13 @@ router.post('/login', function (req, res) {
          var err = new Error();
         err.status = 310;
         return done(err);
-
     }
 
 
 //LOGOUT
-router.delete('/logout', function (req, res) {
+router.post('/logout', function (req, res) {
     req.session.currentUser = null;
-    res.redirect('/');
-
+    res.sendStatus(200);
 });
 
 module.exports = router;

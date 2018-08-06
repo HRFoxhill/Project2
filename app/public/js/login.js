@@ -21,21 +21,31 @@ $(function () {
         }, 300);
     })
 
-    // $.post("/project/create", newProject, function() {
 
-    //     $('#form-submit').removeClass('is-loading').removeClass('is-danger').addClass('is-success');
-    //     $('#form-submit').html('Success!');
 
-    //     // clear input fields
-    //     $("#duration-input").val('');
-    //     $("#description-input").val('');
-    //     $("#title-input").val('');
-    // });
-    // });
+    $('.form-collection').on('click', '.above button', (event) => {
 
-    $('.form-collection').on('click', '.above button', (event) =>{
-       
-        
+        if ($('#login').hasClass('above')) {
+
+            let user = {
+                email: $("#duration-input").val().trim(),
+                password: $("#description-input").val(),
+            }
+
+            $.post("/user/login", user, function () {
+
+              
+               
+
+
+            });
+
+        }
+        else {
+            //
+        }
+
+
 
     })
 })

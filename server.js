@@ -2,26 +2,27 @@ const express = require('express');
 const app = express();
 const expressValidator = require('express-validator');
 const hbs = require('express-hbs');
-const path = require('path');
 const PORT = process.env.PORT || 8080;
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-const db = require("./app/models");
+const { sequelize } = require("./app/models");
 
+//open up public directory for html routes
 app.use(express.static('app/public'));
-app.engine('hbs', hbs.express4({ defaultLayout: "./app/views/layouts/login",
-  partialsDir: __dirname + '/app/views/partials'
-}));
 
+// initialize handlebars
+app.engine('hbs', hbs.express4({ defaultLayout: "./app/views/layouts/login" }));
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/app/views');
 
+// express extensions
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(cookieParser());
-app.use(session({secret: 'HFoxhill', saveUninitialized: true, resave: false}));
+app.use(session({ secret: 'HFoxhill', saveUninitialized: true, resave: false }));
+
 
 //Routes
 //=====================================================
@@ -29,34 +30,29 @@ require("./app/routes/html-routes.js")(app);
 require("./app/routes/projects-api-routes.js")(app);
 require("./app/routes/user-api-routes.js")(app);
 
-//routes for stretch verification.
-// const blockchain = require('./routes/blockchain.route');
-// app.use('/blockchain',blockchain);
 
 //user creation/verification and session Id route
-const user = require('./app/routes/userCreate.route');
-app.use('/user',user);
+const register = require('./app/routes/userCreate.route');
+app.use('/register', register);
 
-app.get('/', function(req, res){
-    console.log("session email " + req.session.email)
-    res.send('hello');
- });
-db.sequelize.sync().then(function() {
-app.listen(PORT, function(req, res){
-   console.log('Server is running on PORT: ',PORT);
-})
-});
+//already registered user route
+const login = require('./app/routes/userCreate.route');
+app.use('/login', login);
 
-// //user login/verification and session Id route
-// const login = require('./app/routes/userLogin.route');
-// app.use('/login',login);
+//create project route
+const projects = require('./app/routes/userLogin.route');
+app.use('/project', projects);
 
-// app.get('/', function(req, res){
-//     console.log("session email " + req.session.email)
-//     res.send('hello');
-//  });
-// db.sequelize.sync().then(function() {
-// app.listen(PORT, function(req, res){
-//    console.log('Server is running on PORT: ',PORT);
-// })
+// // node mailer route
+// app.get('/', function (req, res) {
+//   console.log("session email " + req.session.email)
+//   res.send('hello');
 // });
+
+// 
+sequelize.sync()
+  .then(() => {
+    app.listen(PORT);
+    console.log(`Server is running on port: ${PORT}`);
+  });
+

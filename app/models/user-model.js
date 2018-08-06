@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
     });
     User.associate = function(models) {
       // Associating User with Tasks
-      // When an User is deleted, also delete any associated Tasks
+      // When a User is deleted, also delete any associated Tasks
       User.hasMany(models.Project, {
         onDelete: "cascade"
       });

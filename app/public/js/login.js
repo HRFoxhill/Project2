@@ -20,4 +20,22 @@ $(function () {
             }, 10)
         }, 300);
     })
+
+    // $.post("/project/create", newProject, function() {
+
+    //     $('#form-submit').removeClass('is-loading').removeClass('is-danger').addClass('is-success');
+    //     $('#form-submit').html('Success!');
+
+    //     // clear input fields
+    //     $("#duration-input").val('');
+    //     $("#description-input").val('');
+    //     $("#title-input").val('');
+    // });
+    // });
+
+    $('.form-collection').on('click', '.above button', (event) =>{
+       
+        
+
+    })
 })

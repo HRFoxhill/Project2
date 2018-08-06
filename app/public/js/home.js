@@ -10,33 +10,26 @@ $(document).ready(function () {
             $('.menu').removeClass('sticky-menu');
         }
     })
-
-
     $.ajax({
-
         type: 'GET',
         url: '/api/projects',
         success: function (projects) {
             $.each(projects, function (i, project) {
-               //
+                //
             });
         },
         error: function () {
             alert('error loading projects');
             console.log(projects);
-            
         }
     });
-
-
-
 
     //show-more logic for cards
     var content = document.getElementById("card");
     var button = document.getElementById("show-more");
 
     button.onclick = function () {
-        
+
         if (content.className == "open") {
             //shrink the box
             content.className = "";
@@ -44,8 +37,5 @@ $(document).ready(function () {
             //expand the box
             content.className = "open";
         }
-
     }
-
-
 })

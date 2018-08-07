@@ -11,8 +11,7 @@ $(document).ready(function () {
             $('.menu').removeClass('sticky-menu');
         }
     })
-
-
+  
     //menu shows which section you're in based on scroll height
     $(window).scroll(function () {
         let distanceFromTop = $(document).scrollTop();
@@ -35,8 +34,6 @@ $(document).ready(function () {
             $('.navbar-end').css('visibility', 'hidden');
         }
     })
-
-
 
     //form toggle
     $('.form-button').click(() => {
@@ -92,4 +89,3 @@ $(document).ready(function () {
         event.preventDefault();
         $(this).parent().siblings('.card-content').toggleClass('open');
     })
-})

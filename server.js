@@ -12,9 +12,11 @@ const { sequelize } = require("./app/models");
 app.use(express.static('app/public'));
 
 // initialize handlebars
-app.engine('hbs', hbs.express4({ defaultLayout: "./app/views/layouts/login" }));
+app.engine('hbs', hbs.express4({
+  partialsDir: __dirname + '/views/partials',defaultLayout: "./app/views/layouts/login"
+}));
 app.set('view engine', 'hbs');
-app.set('views', __dirname + '/app/views');
+app.set('views', __dirname + "/app/views");
 
 // express extensions
 app.use(bodyParser.json());

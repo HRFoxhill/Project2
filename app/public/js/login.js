@@ -23,29 +23,25 @@ $(function () {
 
 
 
-    $('.form-collection').on('click', '.above button', (event) => {
+    // $('.form-collection').on('click', '.above button', (event) => {
 
-        if ($('#login').hasClass('above')) {
+    //     if ($('#login').hasClass('above')) {
 
-            let user = {
-                email: $("#duration-input").val().trim(),
-                password: $("#description-input").val(),
-            }
+    //         let user = {
+    //             email: $("#duration-input").val().trim(),
+    //             password: $("#description-input").val(),
+    //         }
 
-            $.post("/user/login", user, function () {
+    //         $.post("/user/login", user, function () {
+    //             location.replace('/home');
+    //         });
 
-              
-               
-
-
-            });
-
-        }
-        else {
-            //
-        }
+    //     }
+    //     else {
+            
+    //     }
 
 
 
-    })
+    // })
 })
